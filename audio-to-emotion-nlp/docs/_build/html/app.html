@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backend API (src/app) &mdash; NLP Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+      <script src="_static/jquery.js"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CLI Utilities (src/cli)" href="cli.html" />
+    <link rel="prev" title="NLP7 Emotion Classification Pipeline" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NLP Pipeline
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Backend API (<cite>src/app</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI Utilities (<cite>src/cli</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration (<cite>src/config</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Module (<cite>src/data</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo Interface (<cite>src/demo</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment (<cite>src/deployment</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Model CLI Utilities (<cite>src/models</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transcription.html">Transcription (<cite>src/transcription</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities (<cite>src/utils</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing (<cite>tests/</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NLP Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Backend API (<cite>src/app</cite>)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/app.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="backend-api-src-app">
+<h1>Backend API (<cite>src/app</cite>)<a class="headerlink" href="#backend-api-src-app" title="Permalink to this heading"></a></h1>
+<p>This module implements the <strong>FastAPI</strong> REST service for interacting with the NLP7 pipeline via HTTP.</p>
+<section id="module-src.app.API_main">
+<span id="main-app"></span><h2>Main App<a class="headerlink" href="#module-src.app.API_main" title="Permalink to this heading"></a></h2>
+<p>API_main.py.</p>
+<p>FastAPI server exposing API endpoints for text, audio, and video.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.app.API_main.ErrorResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">ErrorResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#ErrorResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.ErrorResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Model for error responses from the API.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.ErrorResponse.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.app.API_main.ErrorResponse.detail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.ErrorResponse.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.ErrorResponse.message" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.ErrorResponse.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.ErrorResponse.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.app.API_main.MediaPredictionResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">MediaPredictionResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#MediaPredictionResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.MediaPredictionResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Response model for media (audio/video) emotion prediction.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.MediaPredictionResponse.csv_paths">
+<span class="sig-name descname"><span class="pre">csv_paths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.app.API_main.MediaPredictionResponse.csv_paths" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.MediaPredictionResponse.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.MediaPredictionResponse.message" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.MediaPredictionResponse.results">
+<span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.app.API_main.MediaPredictionResponse.results" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.app.API_main.MediaURLInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">MediaURLInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HttpUrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#MediaURLInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.MediaURLInput" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Model for media URL input to the emotion classification API.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.MediaURLInput.language">
+<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.MediaURLInput.language" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.MediaURLInput.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">HttpUrl</span></em><a class="headerlink" href="#src.app.API_main.MediaURLInput.url" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.app.API_main.TextInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">TextInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ConstrainedStrValue</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#TextInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.TextInput" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Model for text input to the emotion classification API.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextInput.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ConstrainedStrValue</span></em><a class="headerlink" href="#src.app.API_main.TextInput.text" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.app.API_main.TextPredictionResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">TextPredictionResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#TextPredictionResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.TextPredictionResponse" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Response model for text emotion prediction.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextPredictionResponse.confidence">
+<span class="sig-name descname"><span class="pre">confidence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#src.app.API_main.TextPredictionResponse.confidence" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextPredictionResponse.csv_paths">
+<span class="sig-name descname"><span class="pre">csv_paths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.app.API_main.TextPredictionResponse.csv_paths" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextPredictionResponse.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.TextPredictionResponse.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextPredictionResponse.predicted_label">
+<span class="sig-name descname"><span class="pre">predicted_label</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.app.API_main.TextPredictionResponse.predicted_label" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.app.API_main.TextStr">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">TextStr</span></span><a class="headerlink" href="#src.app.API_main.TextStr" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">ConstrainedStrValue</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.clean_temp_uploads">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">clean_temp_uploads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">older_than_seconds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1800</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/API_main.html#clean_temp_uploads"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.API_main.clean_temp_uploads" title="Permalink to this definition"></a></dt>
+<dd><p>Delete temporary files in the ‘temp_uploads’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>older_than_seconds</strong> (<em>int</em>) – Older files will be deleted.
+Defaults to 1800 seconds (30 minutes).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.download_csv">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">download_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.app.API_main.download_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Download the most recent CSV file with audio or video.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.download_csv_file">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">download_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">fastapi.Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.app.API_main.download_csv_file" title="Permalink to this definition"></a></dt>
+<dd><p>Download a specific CSV file from the output directory.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.download_text_csv">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">download_text_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.app.API_main.download_text_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Download the most recent CSV file with text emotion prediction results.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.predict">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.app.API_main.TextInput" title="src.app.API_main.TextInput"><span class="pre">TextInput</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.app.API_main.TextPredictionResponse" title="src.app.API_main.TextPredictionResponse"><span class="pre">TextPredictionResponse</span></a></span></span><a class="headerlink" href="#src.app.API_main.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict the emotion of a given text string using a transformer model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<a class="reference internal" href="#src.app.API_main.TextInput" title="src.app.API_main.TextInput"><em>TextInput</em></a>) – A JSON object containing the input text.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Predicted emotion label, confidence, and path output.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#src.app.API_main.TextPredictionResponse" title="src.app.API_main.TextPredictionResponse">TextPredictionResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.predict_from_file">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">predict_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.UploadFile</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">fastapi.File</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.app.API_main.MediaPredictionResponse" title="src.app.API_main.MediaPredictionResponse"><span class="pre">MediaPredictionResponse</span></a></span></span><a class="headerlink" href="#src.app.API_main.predict_from_file" title="Permalink to this definition"></a></dt>
+<dd><p>Upload an audio file for transcription and emotion classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>UploadFile</em>) – The uploaded .mp3 or .wav file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contains predicted emotions, timestamps,saved CSV paths.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#src.app.API_main.MediaPredictionResponse" title="src.app.API_main.MediaPredictionResponse">MediaPredictionResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.predict_from_url">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">predict_from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.app.API_main.MediaURLInput" title="src.app.API_main.MediaURLInput"><span class="pre">MediaURLInput</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.app.API_main.MediaPredictionResponse" title="src.app.API_main.MediaPredictionResponse"><span class="pre">MediaPredictionResponse</span></a></span></span><a class="headerlink" href="#src.app.API_main.predict_from_url" title="Permalink to this definition"></a></dt>
+<dd><p>Predict emotion from a media URL (YouTube, MP3, MP4).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.predict_from_video">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">predict_from_video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.UploadFile</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">fastapi.File</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#src.app.API_main.MediaPredictionResponse" title="src.app.API_main.MediaPredictionResponse"><span class="pre">MediaPredictionResponse</span></a></span></span><a class="headerlink" href="#src.app.API_main.predict_from_video" title="Permalink to this definition"></a></dt>
+<dd><p>Upload a video file to extract audio, transcribe, and classify emotions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>UploadFile</em>) – The uploaded .mp4 video file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>MediaPredictionResponse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.root">
+<span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.app.API_main.root" title="Permalink to this definition"></a></dt>
+<dd><p>Root endpoint for checking API health status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A simple welcome message indicating the API is online.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.unhandled_exception_handler">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">unhandled_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exception</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.app.API_main.unhandled_exception_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Handle unexpected errors in the API.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.API_main.validation_exception_handler">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.app.API_main.</span></span><span class="sig-name descname"><span class="pre">validation_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">fastapi.exceptions.RequestValidationError</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.app.API_main.validation_exception_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Handle FastAPI validation errors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Details of the validation error.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSONResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Launch with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uvicorn<span class="w"> </span>src.app.API_main:app<span class="w"> </span>--reload
+</pre></div>
+</div>
+<p>Routes defined here expose:</p>
+<ul class="simple">
+<li><p><cite>/</cite> – Root</p></li>
+<li><p><cite>/predict/text</cite> – Text emotion classification</p></li>
+<li><p><cite>/predict/audio</cite> – Audio emotion classification</p></li>
+<li><p><cite>/health</cite> – Readiness checks</p></li>
+</ul>
+</section>
+<section id="module-src.app.model_loader">
+<span id="model-loader"></span><h2>Model Loader<a class="headerlink" href="#module-src.app.model_loader" title="Permalink to this heading"></a></h2>
+<section id="model-loader-py">
+<h3>model_loader.py<a class="headerlink" href="#model-loader-py" title="Permalink to this heading"></a></h3>
+<p>Loads the fine-tuned transformer model, tokenizer, and label encoder
+used for emotion classification.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.model_loader.get_model_components">
+<span class="sig-prename descclassname"><span class="pre">src.app.model_loader.</span></span><span class="sig-name descname"><span class="pre">get_model_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">transformers.RobertaForSequenceClassification</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">transformers.RobertaTokenizer</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">object</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/app/model_loader.html#get_model_components"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.model_loader.get_model_components" title="Permalink to this definition"></a></dt>
+<dd><p>Return the fine-tuned model, tokenizer, and label encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>A tuple containing:</dt><dd><ul class="simple">
+<li><p>model (RobertaForSequenceClassification): The fine-tuned transformer model.</p></li>
+<li><p>tokenizer (RobertaTokenizer): Tokenizer for the model.</p></li>
+<li><p>label_encoder (object): Fitted label encoder for decoding prediction indices.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Loads trained transformer models and the label encoder from <cite>checkpoint-XXXX</cite>.</p>
+</section>
+<section id="module-src.app.predict">
+<span id="prediction-logic"></span><h2>Prediction Logic<a class="headerlink" href="#module-src.app.predict" title="Permalink to this heading"></a></h2>
+<section id="predict-py">
+<h3>predict.py<a class="headerlink" href="#predict-py" title="Permalink to this heading"></a></h3>
+<p>Handles audio transcription, emotion inference, and CSV generation.</p>
+<p>This module connects to the AssemblyAI API to transcribe audio, translates
+Polish sentences if necessary, performs emotion classification using a
+preloaded model, and exports the results to CSV files.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.format_time">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">format_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/src/app/predict.html#format_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.format_time" title="Permalink to this definition"></a></dt>
+<dd><p>Convert time from milliseconds to HH:MM:SS,mmm format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ms</strong> (<em>int</em>) – Time in milliseconds.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Formatted time string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.get_output_paths">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">get_output_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'final_predictions.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/app/predict.html#get_output_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.get_output_paths" title="Permalink to this definition"></a></dt>
+<dd><p>Generate output file paths based on the specified save location(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Name of the output CSV file.</p></li>
+<li><p><strong>save_to</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of target directories (‘output’, ‘desktop’, ‘downloads’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of file paths where the CSV should be saved.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[Path]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.get_sentences">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">get_sentences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transcript_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/app/predict.html#get_sentences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.get_sentences" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve sentence-level transcription results from AssemblyAI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>transcript_id</strong> (<em>str</em>) – The transcript ID from AssemblyAI.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of sentence dictionaries.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.predict_label">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">predict_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/src/app/predict.html#predict_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.predict_label" title="Permalink to this definition"></a></dt>
+<dd><p>Predict the emotion label and confidence for a given text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The input text to classify.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing the predicted label and confidence.
+Or an error message if text is empty.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.process_audio_prediction">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">process_audio_prediction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/src/app/predict.html#process_audio_prediction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.process_audio_prediction" title="Permalink to this definition"></a></dt>
+<dd><p>Transcribes audio, classifies emotions, and saves results to CSV.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>audio_url</strong> (<em>str</em>) – Audio file URL.</p></li>
+<li><p><strong>save_to</strong> (<em>str</em><em>, </em><em>optional</em>) – CSV save location(s).</p></li>
+<li><p><strong>language</strong> (<em>str</em><em>, </em><em>optional</em>) – Language code.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Results and CSV paths.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.run_full_pipeline">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">run_full_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/app/predict.html#run_full_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.run_full_pipeline" title="Permalink to this definition"></a></dt>
+<dd><p>Runs the pipeline and saves results to CSV.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>audio_url</strong> (<em>str</em>) – URL of the audio file to process.</p></li>
+<li><p><strong>save_to</strong> (<em>str</em><em>, </em><em>optional</em>) – Location(s) to save the CSV file.</p></li>
+<li><p><strong>language</strong> (<em>str</em><em>, </em><em>optional</em>) – Language code for transcription.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame of results and list of CSV file paths.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.predict.upload_audio">
+<span class="sig-prename descclassname"><span class="pre">src.app.predict.</span></span><span class="sig-name descname"><span class="pre">upload_audio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/app/predict.html#upload_audio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.predict.upload_audio" title="Permalink to this definition"></a></dt>
+<dd><p>Uploads audio to AssemblyAI for transcription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>audio_url</strong> (<em>str</em>) – The URL of the audio file to transcribe.</p></li>
+<li><p><strong>language</strong> (<em>str</em><em>, </em><em>optional</em>) – Language code (‘pl’, ‘en’, or ‘auto’).</p></li>
+<li><p><strong>&quot;auto&quot;.</strong> (<em>Defaults to</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(language_code, transcript_id)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Performs inference on user-submitted inputs.</p>
+</section>
+<section id="module-src.app.inference">
+<span id="inference-engine"></span><h2>Inference Engine<a class="headerlink" href="#module-src.app.inference" title="Permalink to this heading"></a></h2>
+<section id="inference-py">
+<h3>inference.py<a class="headerlink" href="#inference-py" title="Permalink to this heading"></a></h3>
+<p>Contains core inference logic for emotion classification and optional translation.</p>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.inference.classify_emotion">
+<span class="sig-prename descclassname"><span class="pre">src.app.inference.</span></span><span class="sig-name descname"><span class="pre">classify_emotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/app/inference.html#classify_emotion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.inference.classify_emotion" title="Permalink to this definition"></a></dt>
+<dd><p>Classify the emotion of a single input sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Input sentence in English.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Predicted emotion label and its confidence score as a percentage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.app.inference.translate_if_needed">
+<span class="sig-prename descclassname"><span class="pre">src.app.inference.</span></span><span class="sig-name descname"><span class="pre">translate_if_needed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/src/app/inference.html#translate_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.app.inference.translate_if_needed" title="Permalink to this definition"></a></dt>
+<dd><p>Translate Polish text to English if the language code is ‘pl’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – The input text in Polish or English.</p></li>
+<li><p><strong>lang_code</strong> (<em>str</em>) – The detected language code (e.g., ‘pl’, ‘en’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Translated English text if input was in Polish; otherwise, returns original text.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Routes text/audio through model pipeline.</p>
+</section>
+<section id="azure-client-optional">
+<h2>Azure Client (Optional)<a class="headerlink" href="#azure-client-optional" title="Permalink to this heading"></a></h2>
+<p>Optional cloud routing module to send requests to deployed AzureML endpoints.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>src/
+└── app/
+    ├── API_main.py
+    ├── inference.py
+    ├── model_loader.py
+    ├── predict.py
+    ├── azure_client.py
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="NLP7 Emotion Classification Pipeline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cli.html" class="btn btn-neutral float-right" title="CLI Utilities (src/cli)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Sasha Stacie, Monika Stangenberg, Deuza Borges Varela, Kamil Łęga, Celine Wu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

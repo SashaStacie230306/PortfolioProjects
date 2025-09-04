@@ -1,0 +1,58 @@
+{
+  "title": "eTA Visa Application Guide - Canada",
+  "overview": "All travelers entering Canada must apply for an Electronic Travel Authorization (eTA). It costs 7 CAD (as of February 2024), payable only by credit card. Apply only via the official website: https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/apply-de.html. Submit the application at least 72 hours before departure.",
+  "requirements": [
+    "Valid passport from a visa-exempt country (at least 6 months validity after return)",
+    "Valid email address",
+    "Credit card"
+  ],
+  "important_notes": {
+    "individual_submission": "One eTA application per person. Families must submit separate forms.",
+    "receipt_notice": "You must print the receipt immediately. It cannot be printed later and no copies will be issued.",
+    "email_notice": "The visa authority communicates only via email. Check your junk/spam folders.",
+    "session_warning": "The form times out after inactivity. Click 'Continue session' if prompted.",
+    "no_data_saved": "Your data will not be saved between sessions. Prepare your documents beforehand."
+  },
+  "instructions": {
+    "step_1": "Visit the official eTA site and click 'Get final instructions to apply for an eTA'.",
+    "step_2": "Answer whether your passport was issued in France.",
+    "step_3": "Click 'Continue to the eTA application form'.",
+    "step_4": "If applying for yourself, answer NO. If applying on behalf of someone else (e.g., child or client), answer YES.",
+    "step_5": "Select the travel document you will use to enter Canada.",
+    "step_6": "Select the country that issued your passport and the nationality listed in your passport.",
+    "step_7": "Enter the passport number exactly as printed (no spaces, hyphens, or special characters). Repeat the passport number.",
+    "step_8": "Enter your last name and first name exactly as shown in the passport.",
+    "step_9": "Enter your date of birth, gender, country of birth, and place of birth.",
+    "step_10": "Enter the passport issue date and expiration date.",
+    "step_11": "Indicate if you have another nationality or citizenship.",
+    "step_12": "Select your marital status.",
+    "step_13": "Answer whether you have ever applied for or held a visa, eTA, or permit to visit, live, work or study in Canada.",
+    "step_14": "Enter employer information including: occupation, job title, employer name, country, city, and how long you've worked there.",
+    "step_15": "Provide contact information: preferred language (English or French), email address (enter twice), and full residential address.",
+    "step_16": "Provide travel details: whether you know your travel date, planned entry date, and approximate departure time. (e.g., Top Club 2024 arrives Oct 4, 2024 at ~14:00).",
+    "step_17": "Answer background/security questions: previous visa refusals, deportations, criminal record, tuberculosis history, or other listed conditions.",
+    "step_18": "Agree to the declaration of consent. Enter your full name exactly as in the passport.",
+    "step_19": "Review all your answers. Click 'Proceed to Payment' only if everything is accurate.",
+    "step_20": "Click 'Transmit and pay' and enter your credit card details. If you don\u2019t have one, you may use a family member\u2019s card (not corporate)."
+  },
+  "confirmation": {
+    "payment_receipt": "After successful payment, you will receive a confirmation of receipt from IRCC (Immigration, Refugees and Citizenship Canada).",
+    "approval_notice": "Most applicants receive eTA approval by email shortly after submission. Some may take several days.",
+    "next_steps": "In case of processing delays, you will receive emails with further instructions from IRCC."
+  },
+  "additional_info": {
+    "individual_submission_only": "Each applicant must submit a separate form; no group applications.",
+    "receipt_warning": "Print your receipt immediately. It cannot be retrieved or resent later.",
+    "session_timeout": "Be prepared. The session expires quickly but can be extended.",
+    "email_only": "All updates will be sent via email. Always check your inbox and junk folder."
+  },
+  "status_check_instructions": {
+    "tool": "Use the eTA status check tool from the official IRCC site.",
+    "requirements": [
+      "Application number starting with 'V' (from confirmation email)",
+      "Details of the passport used to apply"
+    ]
+  },
+  "validity": "The eTA is valid for up to five years from the date of issue, or until your passport expires \u2014 whichever comes first.",
+  "travel_reminder": "Always print and carry your approved eTA in your hand luggage along with your passport. You may be required to show it at flight check-in, on board, or at border control."
+}

@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "category": "Packing",
+      "prompt": "What should I bring?",
+      "expected_keywords": ["passport", "sunscreen", "formal attire"]
+    },
+    {
+      "id": 2,
+      "category": "Schedule",
+      "prompt": "What's happening on Monday?",
+      "expected_keywords": ["welcome", "dinner", "meeting"]
+    },
+    {
+      "id": 3,
+      "category": "Connectivity",
+      "prompt": "Will there be WiFi?",
+      "expected_keywords": ["WiFi", "instructions", "connect"]
+    },
+    {
+      "id": 4,
+      "category": "Visa",
+      "prompt": "Do I need a visa?",
+      "expected_keywords": ["ESTA", "ETA", "passport"]
+    },
+    {
+      "id": 5,
+      "category": "Spa",
+      "prompt": "What spa services are available?",
+      "expected_keywords": ["massage", "facial", "treatment"]
+    },
+    {
+      "id": 6,
+      "category": "Ambiguous",
+      "prompt": "What do I need?",
+      "expected_keywords": ["clarify", "more details"]
+    },
+    {
+      "id": 7,
+      "category": "Conversational",
+      "prompt": "What about Tuesday?",
+      "expected_keywords": ["activities", "schedule", "Tuesday"]
+    },
+    {
+      "id": 8,
+      "category": "Out of Scope",
+      "prompt": "Can I order a drone delivery?",
+      "expected_keywords": ["Marbet contact"]
+    }
+  ]
+  

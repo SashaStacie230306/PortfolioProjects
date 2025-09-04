@@ -1,0 +1,262 @@
+annotated-types 0.7.0 Reusable constraint types to use with typing.Annotated
+blis 0.7.11 The Blis BLAS-like linear algebra library, as a self-contained C-extension.
+`-- numpy >=1.19.0
+catalogue 2.0.10 Super lightweight function registries for your library
+certifi 2025.4.26 Python package for providing Mozilla's CA Bundle.
+charset-normalizer 3.4.2 The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.
+click 8.1.8 Composable command line interface toolkit
+`-- colorama *
+cloudpathlib 0.16.0 pathlib-style classes for cloud storage services.
+`-- typing-extensions >4
+colorama 0.4.6 Cross-platform colored terminal text.
+confection 0.1.5 The sweetest config system for Python
+|-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0
+|   |-- annotated-types >=0.6.0 
+|   |-- pydantic-core 2.33.2 
+|   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 
+|   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+|   `-- typing-inspection >=0.4.0 
+|       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+`-- srsly >=2.4.0,<3.0.0
+    `-- catalogue >=2.0.3,<2.1.0 
+cymem 2.0.11 Manage calls to calloc/free through Cython
+filelock 3.18.0 A platform independent file lock.
+fsspec 2025.3.2 File-system specification
+huggingface-hub 0.31.2 Client library to download and publish models, datasets and other repos on the huggingface.co hub
+|-- filelock *
+|-- fsspec >=2023.5.0
+|-- packaging >=20.9
+|-- pyyaml >=5.1
+|-- requests *
+|   |-- certifi >=2017.4.17 
+|   |-- charset-normalizer >=2,<4 
+|   |-- idna >=2.5,<4 
+|   `-- urllib3 >=1.21.1,<3 
+|-- tqdm >=4.42.1
+|   `-- colorama * 
+`-- typing-extensions >=3.7.4.3
+idna 3.10 Internationalized Domain Names in Applications (IDNA)
+jinja2 3.1.6 A very fast and expressive template engine.
+`-- markupsafe >=2.0
+joblib 1.5.0 Lightweight pipelining with Python functions
+langcodes 3.5.0 Tools for labeling human languages with IETF language tags
+`-- language-data >=1.2
+    `-- marisa-trie >=1.1.0 
+        `-- setuptools * 
+language-data 1.3.0 Supplementary data about languages used by the langcodes module
+`-- marisa-trie >=1.1.0
+    `-- setuptools * 
+markupsafe 3.0.2 Safely add untrusted strings to HTML/XML markup.
+mpmath 1.3.0 Python library for arbitrary-precision floating-point arithmetic
+murmurhash 1.0.12 Cython bindings for MurmurHash
+networkx 3.2.1 Python package for creating and manipulating graphs and networks
+numpy 1.26.4 Fundamental package for array computing in Python
+packaging 25.0 Core utilities for Python packages
+pandas 2.2.2 Powerful data structures for data analysis, time series, and statistics
+|-- numpy >=1.22.4
+|-- python-dateutil >=2.8.2
+|   `-- six >=1.5 
+|-- pytz >=2020.1
+`-- tzdata >=2022.7
+preshed 3.0.9 Cython hash table that trusts the keys are pre-hashed
+|-- cymem >=2.0.2,<2.1.0
+`-- murmurhash >=0.28.0,<1.1.0
+pyphen 0.17.2 Pure Python module to hyphenate text
+pytest 8.3.1 pytest: simple powerful testing with Python
+|-- colorama *
+|-- exceptiongroup >=1.0.0rc8
+|   `-- typing-extensions >=4.6.0 
+|-- iniconfig *
+|-- packaging *
+|-- pluggy >=1.5,<2
+`-- tomli >=1
+python-dateutil 2.9.0.post0 Extensions to the standard Python datetime module
+`-- six >=1.5
+pytz 2025.2 World timezone definitions, modern and historical
+pyyaml 6.0.2 YAML parser and emitter for Python
+requests 2.31.0 Python HTTP for Humans.
+|-- certifi >=2017.4.17
+|-- charset-normalizer >=2,<4
+|-- idna >=2.5,<4
+`-- urllib3 >=1.21.1,<3
+scikit-learn 1.4.2 A set of python modules for machine learning and data mining
+|-- joblib >=1.2.0
+|-- numpy >=1.19.5
+|-- scipy >=1.6.0
+|   `-- numpy >=1.22.4,<2.3 
+`-- threadpoolctl >=2.0.0
+spacy 3.7.4 Industrial-strength Natural Language Processing (NLP) in Python
+|-- catalogue >=2.0.6,<2.1.0
+|-- cymem >=2.0.2,<2.1.0
+|-- jinja2 *
+|   `-- markupsafe >=2.0 
+|-- langcodes >=3.2.0,<4.0.0
+|   `-- language-data >=1.2 
+|       `-- marisa-trie >=1.1.0 
+|           `-- setuptools * 
+|-- murmurhash >=0.28.0,<1.1.0
+|-- numpy >=1.19.0
+|-- packaging >=20.0
+|-- preshed >=3.0.2,<3.1.0
+|   |-- cymem >=2.0.2,<2.1.0 
+|   `-- murmurhash >=0.28.0,<1.1.0 
+|-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0
+|   |-- annotated-types >=0.6.0 
+|   |-- pydantic-core 2.33.2 
+|   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 
+|   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+|   `-- typing-inspection >=0.4.0 
+|       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+|-- requests >=2.13.0,<3.0.0
+|   |-- certifi >=2017.4.17 
+|   |-- charset-normalizer >=2,<4 
+|   |-- idna >=2.5,<4 
+|   `-- urllib3 >=1.21.1,<3 
+|-- setuptools *
+|-- smart-open >=5.2.1,<7.0.0
+|-- spacy-legacy >=3.0.11,<3.1.0
+|-- spacy-loggers >=1.0.0,<2.0.0
+|-- srsly >=2.4.3,<3.0.0
+|   `-- catalogue >=2.0.3,<2.1.0 
+|-- thinc >=8.2.2,<8.3.0
+|   |-- blis >=0.7.8,<0.8.0 
+|   |   `-- numpy >=1.19.0 
+|   |-- catalogue >=2.0.4,<2.1.0 
+|   |-- confection >=0.0.1,<1.0.0 
+|   |   |-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0 
+|   |   |   |-- annotated-types >=0.6.0 
+|   |   |   |-- pydantic-core 2.33.2 
+|   |   |   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 
+|   |   |   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+|   |   |   `-- typing-inspection >=0.4.0 
+|   |   |       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+|   |   `-- srsly >=2.4.0,<3.0.0 
+|   |       `-- catalogue >=2.0.3,<2.1.0 (circular dependency aborted here)
+|   |-- cymem >=2.0.2,<2.1.0 
+|   |-- murmurhash >=1.0.2,<1.1.0 
+|   |-- numpy >=1.19.0,<2.0.0 (circular dependency aborted here)
+|   |-- packaging >=20.0 
+|   |-- preshed >=3.0.2,<3.1.0 
+|   |   |-- cymem >=2.0.2,<2.1.0 (circular dependency aborted here)
+|   |   `-- murmurhash >=0.28.0,<1.1.0 (circular dependency aborted here)
+|   |-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0 (circular dependency aborted here)
+|   |-- setuptools * 
+|   |-- srsly >=2.4.0,<3.0.0 (circular dependency aborted here)
+|   `-- wasabi >=0.8.1,<1.2.0 
+|       `-- colorama >=0.4.6 
+|-- tqdm >=4.38.0,<5.0.0
+|   `-- colorama * 
+|-- typer >=0.3.0,<0.10.0
+|   |-- click >=7.1.1,<9.0.0 
+|   |   `-- colorama * 
+|   `-- typing-extensions >=3.7.4.3 
+|-- wasabi >=0.9.1,<1.2.0
+|   `-- colorama >=0.4.6 
+`-- weasel >=0.1.0,<0.4.0
+    |-- cloudpathlib >=0.7.0,<0.17.0 
+    |   `-- typing-extensions >4 
+    |-- confection >=0.0.4,<0.2.0 
+    |   |-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0 
+    |   |   |-- annotated-types >=0.6.0 
+    |   |   |-- pydantic-core 2.33.2 
+    |   |   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 (circular dependency aborted here)
+    |   |   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+    |   |   `-- typing-inspection >=0.4.0 
+    |   |       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+    |   `-- srsly >=2.4.0,<3.0.0 
+    |       `-- catalogue >=2.0.3,<2.1.0 
+    |-- packaging >=20.0 
+    |-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0 (circular dependency aborted here)
+    |-- requests >=2.13.0,<3.0.0 
+    |   |-- certifi >=2017.4.17 
+    |   |-- charset-normalizer >=2,<4 
+    |   |-- idna >=2.5,<4 
+    |   `-- urllib3 >=1.21.1,<3 
+    |-- smart-open >=5.2.1,<7.0.0 
+    |-- srsly >=2.4.3,<3.0.0 (circular dependency aborted here)
+    |-- typer >=0.3.0,<0.10.0 
+    |   |-- click >=7.1.1,<9.0.0 
+    |   |   `-- colorama * 
+    |   `-- typing-extensions >=3.7.4.3 (circular dependency aborted here)
+    `-- wasabi >=0.9.1,<1.2.0 
+        `-- colorama >=0.4.6 (circular dependency aborted here)
+sympy 1.14.0 Computer algebra system (CAS) in Python
+`-- mpmath >=1.1.0,<1.4
+textstat 0.7.3 Calculate statistical features from text
+`-- pyphen *
+thinc 8.2.5 A refreshing functional take on deep learning, compatible with your favorite libraries
+|-- blis >=0.7.8,<0.8.0
+|   `-- numpy >=1.19.0 
+|-- catalogue >=2.0.4,<2.1.0
+|-- confection >=0.0.1,<1.0.0
+|   |-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0 
+|   |   |-- annotated-types >=0.6.0 
+|   |   |-- pydantic-core 2.33.2 
+|   |   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 
+|   |   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+|   |   `-- typing-inspection >=0.4.0 
+|   |       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+|   `-- srsly >=2.4.0,<3.0.0 
+|       `-- catalogue >=2.0.3,<2.1.0 
+|-- cymem >=2.0.2,<2.1.0
+|-- murmurhash >=1.0.2,<1.1.0
+|-- numpy >=1.19.0,<2.0.0
+|-- packaging >=20.0
+|-- preshed >=3.0.2,<3.1.0
+|   |-- cymem >=2.0.2,<2.1.0 
+|   `-- murmurhash >=0.28.0,<1.1.0 
+|-- pydantic >=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<3.0.0
+|   |-- annotated-types >=0.6.0 
+|   |-- pydantic-core 2.33.2 
+|   |   `-- typing-extensions >=4.6.0,<4.7.0 || >4.7.0 
+|   |-- typing-extensions >=4.12.2 (circular dependency aborted here)
+|   `-- typing-inspection >=0.4.0 
+|       `-- typing-extensions >=4.12.0 (circular dependency aborted here)
+|-- setuptools *
+|-- srsly >=2.4.0,<3.0.0
+|   `-- catalogue >=2.0.3,<2.1.0 
+`-- wasabi >=0.8.1,<1.2.0
+    `-- colorama >=0.4.6 
+tqdm 4.66.3 Fast, Extensible Progress Meter
+`-- colorama *
+transformers 4.36.2 State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow
+|-- filelock *
+|-- huggingface-hub >=0.19.3,<1.0
+|   |-- filelock * 
+|   |-- fsspec >=2023.5.0 
+|   |-- packaging >=20.9 
+|   |-- pyyaml >=5.1 
+|   |-- requests * 
+|   |   |-- certifi >=2017.4.17 
+|   |   |-- charset-normalizer >=2,<4 
+|   |   |-- idna >=2.5,<4 
+|   |   `-- urllib3 >=1.21.1,<3 
+|   |-- tqdm >=4.42.1 
+|   |   `-- colorama * 
+|   `-- typing-extensions >=3.7.4.3 
+|-- numpy >=1.17
+|-- packaging >=20.0
+|-- pyyaml >=5.1
+|-- regex !=2019.12.17
+|-- requests *
+|   |-- certifi >=2017.4.17 
+|   |-- charset-normalizer >=2,<4 
+|   |-- idna >=2.5,<4 
+|   `-- urllib3 >=1.21.1,<3 
+|-- safetensors >=0.3.1
+|-- tokenizers >=0.14,<0.19
+|   `-- huggingface-hub >=0.16.4,<1.0 
+|       |-- filelock * 
+|       |-- fsspec >=2023.5.0 
+|       |-- packaging >=20.9 
+|       |-- pyyaml >=5.1 
+|       |-- requests * 
+|       |   |-- certifi >=2017.4.17 
+|       |   |-- charset-normalizer >=2,<4 
+|       |   |-- idna >=2.5,<4 
+|       |   `-- urllib3 >=1.21.1,<3 
+|       |-- tqdm >=4.42.1 
+|       |   `-- colorama * 
+|       `-- typing-extensions >=3.7.4.3 
+`-- tqdm >=4.27
+    `-- colorama * 

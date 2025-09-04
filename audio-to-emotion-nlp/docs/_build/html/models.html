@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model CLI Utilities (src/models) &mdash; NLP Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+      <script src="_static/jquery.js"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transcription (src/transcription)" href="transcription.html" />
+    <link rel="prev" title="Deployment (src/deployment)" href="deployment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NLP Pipeline
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="app.html">Backend API (<cite>src/app</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI Utilities (<cite>src/cli</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration (<cite>src/config</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Module (<cite>src/data</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo Interface (<cite>src/demo</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment (<cite>src/deployment</cite>)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model CLI Utilities (<cite>src/models</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transcription.html">Transcription (<cite>src/transcription</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities (<cite>src/utils</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing (<cite>tests/</cite>)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NLP Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Model CLI Utilities (<cite>src/models</cite>)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="model-cli-utilities-src-models">
+<h1>Model CLI Utilities (<cite>src/models</cite>)<a class="headerlink" href="#model-cli-utilities-src-models" title="Permalink to this heading"></a></h1>
+<p>This module provides command-line interfaces (CLI) for training, evaluating, and managing models.</p>
+<section id="module-src.models.CLI_models">
+<span id="model-training-cli"></span><h2>Model Training CLI<a class="headerlink" href="#module-src.models.CLI_models" title="Permalink to this heading"></a></h2>
+<p>CLI Models for Emotion Classification.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.CLI_models.classify_emotions">
+<span class="sig-prename descclassname"><span class="pre">src.models.CLI_models.</span></span><span class="sig-name descname"><span class="pre">classify_emotions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="_modules/src/models/CLI_models.html#classify_emotions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.models.CLI_models.classify_emotions" title="Permalink to this definition"></a></dt>
+<dd><p>Predict emotion labels for a list of input sentences using a pretrained model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texts</strong> (<em>list</em><em> of </em><em>str</em>) – Input sentences to classify.</p></li>
+<li><p><strong>model</strong> – The loaded transformer model for emotion classification.</p></li>
+<li><p><strong>tokenizer</strong> – The tokenizer used to preprocess text.</p></li>
+<li><p><strong>label_encoder</strong> – The LabelEncoder used to decode prediction indices into labels.</p></li>
+<li><p><strong>device</strong> – The device on which the model runs (CPU or CUDA).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Predicted emotion labels corresponding to the input sentences.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.CLI_models.load_model">
+<span class="sig-prename descclassname"><span class="pre">src.models.CLI_models.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkpoint_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/models/CLI_models.html#load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.models.CLI_models.load_model" title="Permalink to this definition"></a></dt>
+<dd><p>Load a pretrained emotion classification model, tokenizer, and label encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checkpoint_path</strong> (<em>str</em>) – Path to the directory containing the model checkpoint.</p></li>
+<li><p><strong>label_encoder_path</strong> (<em>str</em>) – Path to the saved label encoder (.pkl file).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple containing:</dt><dd><ul class="simple">
+<li><p>model: The loaded PyTorch transformer model for sequence classification.</p></li>
+<li><p>tokenizer: The corresponding tokenizer.</p></li>
+<li><p>label_encoder: A fitted sklearn LabelEncoder for decoding predicted
+labels.</p></li>
+<li><p>device: The torch device (CPU or CUDA) the model is loaded onto.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Allows you to fine-tune transformer models using custom datasets.</p>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>src/models/CLI_models.py<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--train_path<span class="w"> </span>data/train/final_output.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--epochs<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--model<span class="w"> </span>distilbert-base-uncased
+</pre></div>
+</div>
+</section>
+<section id="module-src.models.CLI_evaluation">
+<span id="evaluation-cli"></span><h2>Evaluation CLI<a class="headerlink" href="#module-src.models.CLI_evaluation" title="Permalink to this heading"></a></h2>
+<p>Evaluate a trained emotion classification model on a labeled test dataset.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.models.CLI_evaluation.evaluate_test_set">
+<span class="sig-prename descclassname"><span class="pre">src.models.CLI_evaluation.</span></span><span class="sig-name descname"><span class="pre">evaluate_test_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/models/CLI_evaluation.html#evaluate_test_set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.models.CLI_evaluation.evaluate_test_set" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate a trained emotion classification model on a labeled test dataset.</p>
+<p>The function computes accuracy, precision, recall, and F1 score by:
+- Tokenizing test sentences.
+- Running inference with the model.
+- Comparing predictions to true labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – A pretrained transformer model for sequence classification.</p></li>
+<li><p><strong>tokenizer</strong> – The tokenizer corresponding to the model.</p></li>
+<li><p><strong>df_test</strong> (<em>pd.DataFrame</em>) – DataFrame containing the test data. Must include
+columns “Sentence” and “Emotion_Label”.</p></li>
+<li><p><strong>label_encoder</strong> – Fitted LabelEncoder used to encode emotion labels.</p></li>
+<li><p><strong>device</strong> – Torch device to run inference on (e.g., ‘cpu’ or ‘cuda’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>A dictionary with evaluation metrics: accuracy, precision, recall, and
+F1 score.</p></li>
+<li><p>A NumPy array of predicted label indices.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[dict, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Evaluate trained models and print classification metrics.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>src/
+└── models/
+    ├── CLI_models.py
+    ├── CLI_evaluation.py
+    ├── label_encoder.pkl
+    └── __init__.py
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="deployment.html" class="btn btn-neutral float-left" title="Deployment (src/deployment)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transcription.html" class="btn btn-neutral float-right" title="Transcription (src/transcription)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Sasha Stacie, Monika Stangenberg, Deuza Borges Varela, Kamil Łęga, Celine Wu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

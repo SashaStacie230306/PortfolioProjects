@@ -1,0 +1,10 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: .  # This assumes transcribe_main.py is in the current folder
+command: >-
+  python Transcribe_process_job.py
+environment: azureml:nlp7-emotion-env@latest
+compute: azureml:adsai-lambda-0
+display_name: transcribe-preprocess-standalone
+experiment_name: transcription_pipeline
+environment_variables:
+  ASSEMBLYAI_API_KEY: ${{secrets.ASSEMBLYAI_API_KEY}}

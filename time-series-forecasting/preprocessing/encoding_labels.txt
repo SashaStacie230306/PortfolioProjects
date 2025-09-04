@@ -1,0 +1,72 @@
+Severity 
+
+Fatal - 0 
+Injured - 1 
+Material damage - 2 
+
+Wheather 
+
+Rain - 1 
+Dry - 0
+
+First mode of transport: 
+
+car - 2 
+delivery van - 3 
+Moped - 6 
+bicycle - 0 
+light moped - 4 
+lorry - 5 
+motorcycle - 7
+bus - 1 
+
+
+Area type: 
+
+Rural area - 0 
+Urban area - 1  
+
+Light condition 
+
+Dark - 0
+Light - 1
+
+Road location;
+
+Intersection - 0 
+Road section - 1 
+
+
+Road condition
+
+Dry - 0 
+Wet/damp - 1   
+
+
+Road surface - 
+
+Asphalt/other - 0 
+Porous Asphalt - 3 
+Brick - 1 
+Concrete - 2 
+
+Road situation : 
+
+straight road - 4 
+Intersection(4) - 2 
+Intersection (3) - 1 
+bend - 0 
+Roundabout - 3 
+
+
+Speed limit: 
+
+50km/h - 3 
+30km/h - 2 
+70km/h - 5 
+60 km/h - 4 
+80km/h - 6 
+130km/h - 0 
+15km/h - 1 
+
+

@@ -1,0 +1,36 @@
+{
+  "wifi_name": "Scenic Guest",
+  "wifi_password": "Spaceship1",
+  "instructions": [
+    {
+      "device": "Android",
+      "steps": [
+        "Tap on 'WLAN' and select Scenic Guest.",
+        "Enter the password Spaceship1 and click on the view more option.",
+        "Scroll down to MAC address type and select the 'Phone MAC' option.",
+        "You are now connected to the WLAN."
+      ],
+      "image_refs": [
+        "wifi_images/wifi_step_1.jpeg",
+        "wifi_images/wifi_step_3.jpeg",
+        "wifi_images/wifi_step_4.jpeg",
+        "wifi_images/wifi_step_5.jpeg",
+        "wifi_images/wifi_step_7.jpeg"
+      ]
+    },
+    {
+      "device": "iOS",
+      "steps": [
+        "Select the Scenic Guest WLAN and enter the password Spaceship1.",
+        "Click on the blue ⓘ symbol.",
+        "Deactivate the private WLAN address and click on 'Next'.",
+        "Exit the 'Settings' — you are now connected to the WLAN."
+      ],
+      "image_refs": [
+        "wifi_images/wifi_step_9.jpeg",
+        "wifi_images/wifi_step_11.jpeg",
+        "wifi_images/wifi_step_12.jpeg"
+      ]
+    }
+  ]
+}

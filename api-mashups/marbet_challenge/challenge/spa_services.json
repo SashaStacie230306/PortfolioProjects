@@ -1,0 +1,324 @@
+{
+  "section": "Spa Services",
+  "description": "At Senses Spa, we are proud to partner with ESPA, a world-renowned leader in luxury skincare & spa ingredients. ESPA products are carefully crafted with the purest ingredients blending the power of Mother Nature and modern science.",
+  "categories": [
+    {
+      "category": "Manicure / Pedicure",
+      "services": [
+        {
+          "name": "Rejuvenating Retreat Manicure",
+          "duration": "60 min.",
+          "price": "$119"
+        },
+        {
+          "name": "Rejuvenating Retreat Pedicure",
+          "duration": "75 min.",
+          "price": "$169"
+        },
+        {
+          "name": "Long-lasting Gel Manicure (Shellac)",
+          "duration": "50 min.",
+          "price": "$119"
+        },
+        {
+          "name": "Long-lasting Gel Pedicure (Shellac)",
+          "duration": "60 min.",
+          "price": "$129"
+        },
+        {
+          "name": "Glow and Go Manicure",
+          "duration": "35 min.",
+          "price": "$55"
+        },
+        {
+          "name": "Glow and Go Pedicure",
+          "duration": "45 min.",
+          "price": "$89"
+        },
+        {
+          "name": "Gel Nails Extension",
+          "duration": "90 min.",
+          "price": "$195"
+        }
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Nail Enhancement\u2019s",
+          "services": [
+            {
+              "name": "Paraffin Perfection Treatment",
+              "price": "$29"
+            },
+            {
+              "name": "Soak Off",
+              "price": "$29"
+            },
+            {
+              "name": "Nail Fix",
+              "duration": "15 min.",
+              "price": "$20"
+            },
+            {
+              "name": "Hand Massage",
+              "duration": "25 min.",
+              "price": "$89"
+            },
+            {
+              "name": "Foot Massage",
+              "duration": "25 min.",
+              "price": "$99"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Advanced Beauty",
+      "services": [
+        {
+          "name": "Full Leg Wax",
+          "price": "$78"
+        },
+        {
+          "name": "Half Leg Wax",
+          "price": "$53"
+        },
+        {
+          "name": "Underarm Wax",
+          "price": "$46"
+        },
+        {
+          "name": "Lip-, Chin- or Eyebrow",
+          "price": "$28"
+        },
+        {
+          "name": "Bikini Wax",
+          "price": "$53"
+        },
+        {
+          "name": "Brazilian Wax",
+          "price": "$79"
+        },
+        {
+          "name": "Eyebrow Tint",
+          "price": "$35"
+        },
+        {
+          "name": "Eyelash Tint",
+          "price": "$37"
+        }
+      ]
+    },
+    {
+      "category": "Fitness / Wellness",
+      "services": [
+        {
+          "name": "Personal Training",
+          "duration": "60 / 30 min.",
+          "price": "$127 / $75"
+        },
+        {
+          "name": "Personal Yoga / Pilates / TRX Session",
+          "duration": "60 / 30 min.",
+          "price": "$127 / $75"
+        },
+        {
+          "name": "Back Pain Free with exercise (PT session)",
+          "duration": "30 min.",
+          "price": "$75"
+        },
+        {
+          "name": "Back Pain Free with exercise Course of 3",
+          "duration": "30 min.",
+          "price": "$199"
+        },
+        {
+          "name": "Sound Vibration Leg-Relax Therapy (Sound & vibration therapy)",
+          "duration": "45 / 30 min.",
+          "price": "$119 / $99"
+        },
+        {
+          "name": "Therabody Relax Lounger",
+          "duration": "45 / 30 min.",
+          "price": "$65 / $49"
+        }
+      ]
+    },
+    {
+      "category": "Spa Treatments",
+      "subcategories": [
+        {
+          "subcategory": "Premium Pampering",
+          "services": [
+            {
+              "name": "Scenic Rejuvenate",
+              "duration": "120 min.",
+              "price": "$379"
+            },
+            {
+              "name": "Scenic Revive",
+              "duration": "120 min.",
+              "price": "$379"
+            },
+            {
+              "name": "Scenic Relax",
+              "duration": "90 min.",
+              "price": "$289"
+            },
+            {
+              "name": "Warm Aromatic Poultice Heaven",
+              "duration": "90 min.",
+              "price": "$295"
+            }
+          ]
+        },
+        {
+          "subcategory": "Massages & Body Treatments",
+          "services": [
+            {
+              "name": "Relaxing Inner Calm Massage by ESPA",
+              "duration": "60 / 90 min.",
+              "price": "$185 / $255"
+            },
+            {
+              "name": "Deep Muscle Massage by ESPA",
+              "duration": "60 / 90 min.",
+              "price": "$205 / $289"
+            },
+            {
+              "name": "Bamboo Tension & Stress Release Massage",
+              "duration": "60 / 90 min.",
+              "price": "$225 / $295"
+            },
+            {
+              "name": "Thai Massage",
+              "duration": "60 / 90 min.",
+              "price": "$208 / $305"
+            },
+            {
+              "name": "Hot Stone Melt Away Massage by ESPA",
+              "duration": "60 / 90 min.",
+              "price": "$235 / $305"
+            },
+            {
+              "name": "Reflexology",
+              "duration": "60 min.",
+              "price": "$205"
+            },
+            {
+              "name": "Muscle Reviver by ESPA",
+              "duration": "40 min.",
+              "price": "$159"
+            },
+            {
+              "name": "Long Walk Leg Recovery (25% off with Walking tours)",
+              "duration": "40 min.",
+              "price": "$139"
+            },
+            {
+              "name": "Ocean Glow Body Scrub",
+              "duration": "25 min.",
+              "price": "$99"
+            }
+          ]
+        },
+        {
+          "subcategory": "Facials & Skin Therapy",
+          "services": [
+            {
+              "name": "The Natural Face Lift by ESPA",
+              "duration": "90 min.",
+              "price": "$337"
+            },
+            {
+              "name": "Active Nutrients Glow from Within by ESPA",
+              "duration": "60 min.",
+              "price": "$210"
+            },
+            {
+              "name": "Inner Beauty Facial by ESPA",
+              "duration": "60 min.",
+              "price": "$197"
+            },
+            {
+              "name": "Men\u2019 Deep Cleansing Facial by ESPA",
+              "duration": "60 min.",
+              "price": "$197"
+            },
+            {
+              "name": "Dermalux Rejuvenating Led Therapy",
+              "duration": "30 min.",
+              "price": "$89"
+            },
+            {
+              "name": "Instant Eye Lift",
+              "duration": "30 min.",
+              "price": "$89"
+            },
+            {
+              "name": "Cryotherapy Globes by ESPA",
+              "duration": "15 min.",
+              "price": "$59"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Hairdressing",
+      "services": [
+        {
+          "name": "Wash & Style",
+          "price": "$69 \u2013 $99"
+        },
+        {
+          "name": "Cut & Style",
+          "price": "$85 \u2013 $119"
+        },
+        {
+          "name": "Full Head Color (wash & style included)",
+          "price": "$149 \u2013 $199"
+        },
+        {
+          "name": "Root Touch Up (wash & style included)",
+          "price": "$129 \u2013 $149"
+        },
+        {
+          "name": "Partial Highlights (wash & style included)",
+          "price": "$149"
+        },
+        {
+          "name": "Full Highlights (wash & style included)",
+          "price": "$229"
+        },
+        {
+          "name": "Updo / Up-Style",
+          "price": "$99"
+        }
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Barbering Services",
+          "services": [
+            {
+              "name": "Gent\u2019s Cut",
+              "price": "$59"
+            },
+            {
+              "name": "Beard Trim",
+              "price": "$29"
+            },
+            {
+              "name": "Gent\u2019s Color",
+              "price": "$69 \u2013 $89"
+            },
+            {
+              "name": "Gent\u2019s Package (Hair Cut & Shave)",
+              "price": "$149"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

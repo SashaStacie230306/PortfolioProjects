@@ -1,0 +1,43 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - '*'  # Trigger on all branches
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_TAG: ${{ github.sha }}
+      USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build & Push Backend Image (SHA tag only)
+        run: |
+          docker buildx build --platform linux/amd64 -f API_Dockerfile -t $USERNAME/nlp-api:$IMAGE_TAG --push .
+
+      - name: Build & Push Frontend Image (SHA tag only)
+        run: |
+          docker buildx build --platform linux/amd64 -f AUI_Dockerfile -t $USERNAME/nlp-ui:$IMAGE_TAG --push .
+
+      - name: Tag & Push Backend as :latest (only on main)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          docker buildx build --platform linux/amd64 -f API_Dockerfile -t $USERNAME/nlp-api:latest --push .
+
+      - name: Tag & Push Frontend as :latest (only on main)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          docker buildx build --platform linux/amd64 -f AUI_Dockerfile -t $USERNAME/nlp-ui:latest --push .

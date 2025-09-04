@@ -1,0 +1,1881 @@
+2025-06-26 23:02:28,438 - src.cli.main - INFO - FILE LOADED
+2025-06-26 23:02:33,045 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-26 23:02:33,045 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-26 23:02:33,071 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-26 23:02:33,124 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-26 23:02:34,143 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000001BEAFF21180>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:02:34,221 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000001BEAFF21180>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:02:34,234 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-26 23:02:34,258 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:02:35,633 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:02:35,634 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:02:35,634 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:02:35,636 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e10a5cec-52d0-11f0-a37f-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:02:47,027 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '455d9f90-50a4-47a7-84dd-502b7de29720'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 43A24118DB5540369AB168727CC6AC93 Ref B: AMS231032607027 Ref C: 2025-06-26T21:02:39Z'
+    'Date': 'Thu, 26 Jun 2025 21:02:50 GMT'
+2025-06-26 23:02:47,033 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:02:48,616 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:02:48,616 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:02:48,617 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:02:48,618 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-emotion-env/versions/32?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e95c4c8c-52d0-11f0-8628-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:02:48,972 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3925'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '464641fe-7d23-4866-be13-55334beb5e8a'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A38E46E1484E456EA3DDC1D0CBF96660 Ref B: AMS231032609045 Ref C: 2025-06-26T21:02:52Z'
+    'Date': 'Thu, 26 Jun 2025 21:02:52 GMT'
+2025-06-26 23:02:49,008 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-26 23:02:49,009 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-26 23:02:49,023 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-26 23:02:49,024 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-26 23:02:50,030 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000001BEAFEF4A60>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:02:50,032 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000001BEAFEF4A60>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:02:50,035 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-26 23:02:50,040 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:02:51,785 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:02:51,785 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:02:51,785 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:02:51,791 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ea8c87bd-52d0-11f0-96e5-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:02:52,087 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': '36cf13c3-828b-47e5-8790-816902c82ac2'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: EEBF708F0F6145D7A3735FCCC6833A99 Ref B: AMS231032609033 Ref C: 2025-06-26T21:02:55Z'
+    'Date': 'Thu, 26 Jun 2025 21:02:55 GMT'
+2025-06-26 23:02:52,091 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2/deployments?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'ec606dac-52d0-11f0-8ed4-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:03:01,701 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2673'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-original-request-ids': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '10cd2f0c-0779-4b74-9661-1df073846c18'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 2210392FEDDF4677B41E7F54D4D487E2 Ref B: AMS231032609033 Ref C: 2025-06-26T21:02:56Z'
+    'Date': 'Thu, 26 Jun 2025 21:03:05 GMT'
+2025-06-26 23:03:01,705 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:03:03,068 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:03:03,068 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:03:03,068 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:03:03,068 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification-full/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f21b1e42-52d0-11f0-8d0a-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:03:03,399 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '17'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'd4f899a7-929d-4705-8a08-4bedbc1bae3d'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 88C1727A00874C1383E7ED0C5AD437EB Ref B: AMS231032607011 Ref C: 2025-06-26T21:03:07Z'
+    'Date': 'Thu, 26 Jun 2025 21:03:06 GMT'
+2025-06-26 23:03:03,400 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f31e4198-52d0-11f0-a615-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:03:03,910 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '4da612af-512e-4354-927b-b495d05c097e'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 9F6E509D9CC2448DBAFA07F6D9101609 Ref B: AMS231032607011 Ref C: 2025-06-26T21:03:07Z'
+    'Date': 'Thu, 26 Jun 2025 21:03:06 GMT'
+2025-06-26 23:03:03,917 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:03:05,585 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:03:05,585 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:03:05,585 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:03:05,586 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-inference-env/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'f36c9e84-52d0-11f0-8de3-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:03:06,686 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 404
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'b0f50e3e-bebc-4fb6-8373-16841586e49d'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 6AEA77208ED742B4B2CC15A9CA6BFFAD Ref B: AMS231020512039 Ref C: 2025-06-26T21:03:09Z'
+    'Date': 'Thu, 26 Jun 2025 21:03:10 GMT'
+2025-06-26 23:46:44,821 - src.cli.main - INFO - FILE LOADED
+2025-06-26 23:46:47,054 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-26 23:46:47,055 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-26 23:46:47,083 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-26 23:46:47,086 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-26 23:46:48,104 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000025E209974F0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:46:48,112 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000025E209974F0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:46:48,114 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-26 23:46:48,119 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:46:49,442 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:46:49,442 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:46:49,442 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:46:49,443 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '0ef43e42-52d7-11f0-8e1a-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:49,791 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'fc8228d7-4d74-4d4e-ad94-e66df8257c94'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: C0DE468E410A425CACC5E908F451141C Ref B: AMS231020512027 Ref C: 2025-06-26T21:46:53Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:53 GMT'
+2025-06-26 23:46:49,797 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:46:51,284 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:46:51,285 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:46:51,285 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:46:51,285 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-emotion-env/versions/32?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '109215b9-52d7-11f0-a102-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:51,664 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3925'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'e7a3d5ef-3b3b-493f-93e3-56f65ca946c8'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 888B62F69B434466ABD43301E399B885 Ref B: AMS231032609035 Ref C: 2025-06-26T21:46:55Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:55 GMT'
+2025-06-26 23:46:51,685 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-26 23:46:51,685 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-26 23:46:51,704 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-26 23:46:51,705 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-26 23:46:52,715 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000025E20997610>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:46:52,716 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000025E20997610>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-26 23:46:52,718 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-26 23:46:52,722 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:46:54,055 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:46:54,056 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:46:54,056 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:46:54,056 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '11b58869-52d7-11f0-850d-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:54,283 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': 'f33bc50e-7f28-42c4-afd9-611eb81d5eb0'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 7CC1168A4B424A8A8E8DCCB37A0982E9 Ref B: AMS231020512031 Ref C: 2025-06-26T21:46:58Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:57 GMT'
+2025-06-26 23:46:54,285 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2/deployments?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '133f59ff-52d7-11f0-895d-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:54,513 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2673'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-original-request-ids': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '87267da8-2b34-456a-857c-aecbc65fc8c7'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 00944B6174B047D48F4C33EC386A7112 Ref B: AMS231020512031 Ref C: 2025-06-26T21:46:58Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:57 GMT'
+2025-06-26 23:46:54,518 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:46:55,824 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:46:55,825 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:46:55,825 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:46:55,825 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification-full/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '1362a26d-52d7-11f0-b3e5-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:56,099 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '17'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '0f3db05e-7627-4dc2-a572-0cfc9bdeb4de'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 2B63D054F8574CECB5D06C54E1AEE587 Ref B: AMS231032608053 Ref C: 2025-06-26T21:46:59Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:59 GMT'
+2025-06-26 23:46:56,100 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '14545743-52d7-11f0-a327-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:56,278 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '7dd5a124-ac7b-4409-9c3f-db91bc570d04'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: C20320F798FC4EB48426C93F7F2FF086 Ref B: AMS231032608053 Ref C: 2025-06-26T21:47:00Z'
+    'Date': 'Thu, 26 Jun 2025 21:46:59 GMT'
+2025-06-26 23:46:56,284 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-26 23:46:57,557 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-26 23:46:57,557 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-26 23:46:57,557 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-26 23:46:57,557 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-inference-env/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '14702a6e-52d7-11f0-a26c-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-26 23:46:57,952 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 404
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '21c7afd9-64a2-495d-a487-d8457b7f432e'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 83F774DD1EDA4128A0A13CA8FD4810BB Ref B: AMS231032609033 Ref C: 2025-06-26T21:47:01Z'
+    'Date': 'Thu, 26 Jun 2025 21:47:01 GMT'
+2025-06-27 01:09:21,205 - src.cli.main - INFO - FILE LOADED
+2025-06-27 01:09:24,522 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-27 01:09:24,522 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-27 01:09:24,560 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-27 01:09:24,641 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-27 01:09:25,659 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000002375C5A5D80>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:09:25,788 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000002375C5A5D80>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:09:25,831 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-27 01:09:25,922 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:09:27,707 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:09:27,707 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:09:27,709 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:09:27,709 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '99d765c6-52e2-11f0-a3f9-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:28,023 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'a474506f-d6df-4570-b5d0-5e3fda1738e2'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 937AC2E57FC14E0F9CE016FE22C5B412 Ref B: AMS231032608023 Ref C: 2025-06-26T23:09:31Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:31 GMT'
+2025-06-27 01:09:28,030 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:09:29,785 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:09:29,785 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:09:29,785 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:09:29,785 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-emotion-env/versions/32?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9be86632-52e2-11f0-881b-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:30,397 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3925'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '4b0aeff5-1d24-4a50-810e-49d913a765f8'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: AEA2130A9D1E4C4C94466F8B9DDB0BB5 Ref B: AMS231020615035 Ref C: 2025-06-26T23:09:33Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:34 GMT'
+2025-06-27 01:09:30,504 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-27 01:09:30,504 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-27 01:09:30,527 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-27 01:09:30,531 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-27 01:09:31,542 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000002375C552620>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:09:31,542 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x000002375C552620>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:09:31,542 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-27 01:09:31,550 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:09:33,246 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:09:33,246 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:09:33,248 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:09:33,248 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9d65eba3-52e2-11f0-b2f4-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:33,899 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': '116c44bb-d702-4d83-a794-cda78a033a22'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 3035F1E6952B4A21BD0F0722DF9D9EA5 Ref B: AMS231020512021 Ref C: 2025-06-26T23:09:37Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:37 GMT'
+2025-06-27 01:09:33,901 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2/deployments?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9f68d137-52e2-11f0-ba0e-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:34,136 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2673'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-original-request-ids': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'f9dc4ad5-7fd1-4e61-a64d-a422708007ff'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 336F99FFAEE24318ADCF0EF5338A77C6 Ref B: AMS231020512021 Ref C: 2025-06-26T23:09:38Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:37 GMT'
+2025-06-27 01:09:34,147 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:09:35,874 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:09:35,874 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:09:35,874 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:09:35,874 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification-full/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '9f8d59dd-52e2-11f0-8ff7-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:36,168 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '17'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '4e20282d-cac9-4b28-aa56-bc04af4ff529'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: D1F8D824596749BC833D71AB11A6B82F Ref B: AMS231032607021 Ref C: 2025-06-26T23:09:40Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:39 GMT'
+2025-06-27 01:09:36,171 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a0c30fe3-52e2-11f0-8e68-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:36,647 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '37afb153-055b-4507-9503-48e51c5672dc'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 5EA4128FB1BF44F8AF47B89B8245AF87 Ref B: AMS231032607021 Ref C: 2025-06-26T23:09:40Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:40 GMT'
+2025-06-27 01:09:36,654 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:09:38,517 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:09:38,517 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:09:38,517 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:09:38,517 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-inference-env/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a10c0b1e-52e2-11f0-902f-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:09:39,003 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 404
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '38f5fb38-c201-45aa-b728-35d0c6f7f545'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: D4CFFECE4DC44E538A20CE6A09084BB5 Ref B: AMS231020614023 Ref C: 2025-06-26T23:09:42Z'
+    'Date': 'Thu, 26 Jun 2025 23:09:42 GMT'
+2025-06-27 01:20:57,407 - src.cli.main - INFO - FILE LOADED
+2025-06-27 01:27:42,190 - src.cli.main - INFO - FILE LOADED
+2025-06-27 01:27:44,911 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-27 01:27:44,911 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-27 01:27:44,938 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-27 01:27:44,939 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-27 01:27:45,951 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000019D93187EB0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:27:45,955 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000019D93187EB0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:27:45,957 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-27 01:27:45,964 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:27:47,889 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:27:47,889 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:27:47,889 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:27:47,889 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '29b7db10-52e5-11f0-82a4-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:48,173 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '25d02c96-721b-47e2-adbb-9409c5017f10'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: FAC681B0CBA24094BE0A67EF1CE38A96 Ref B: AMS231032608029 Ref C: 2025-06-26T23:27:52Z'
+    'Date': 'Thu, 26 Jun 2025 23:27:51 GMT'
+2025-06-27 01:27:48,182 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:27:50,065 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:27:50,065 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:27:50,065 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:27:50,068 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-emotion-env/versions/32?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2ba642e2-52e5-11f0-897d-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:50,424 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3925'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '498ac72d-b3e8-4d30-b6a2-33be916c8d00'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: D184D625D619409C9456713072EADBE9 Ref B: AMS231022012025 Ref C: 2025-06-26T23:27:54Z'
+    'Date': 'Thu, 26 Jun 2025 23:27:54 GMT'
+2025-06-27 01:27:50,445 - azure.identity._credentials.environment - INFO - No environment configuration found.
+2025-06-27 01:27:50,445 - azure.identity._credentials.managed_identity - INFO - ManagedIdentityCredential will use IMDS
+2025-06-27 01:27:50,470 - azure.identity._internal.decorators - DEBUG - EnvironmentCredential.get_token_info failed: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\environment.py", line 181, in get_token_info
+    raise CredentialUnavailableError(message=message)
+azure.identity._exceptions.CredentialUnavailableError: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2025-06-27 01:27:50,472 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=REDACTED&resource=REDACTED'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-06-27 01:27:51,493 - azure.identity._internal.msal_managed_identity_client - DEBUG - ImdsCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000019D932309D0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:27:51,495 - azure.identity._internal.decorators - DEBUG - ManagedIdentityCredential.get_token_info failed: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 86, in _request_token
+    client.request_token(*scopes, connection_timeout=1, retry_total=0)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\managed_identity_client.py", line 145, in request_token
+    response = self._pipeline.run(request, retry_on_methods=[request.method], **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 566, in send
+    raise err
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\policies\_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\core\pipeline\transport\_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: (<urllib3.connection.HTTPConnection object at 0x0000019D932309D0>, 'Connection to 169.254.169.254 timed out. (connect timeout=1)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\managed_identity.py", line 212, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 143, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\msal_managed_identity_client.py", line 163, in _get_token_base
+    token = self._request_token(*scopes, claims=claims, tenant_id=tenant_id, enable_cae=enable_cae, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\imds.py", line 96, in _request_token
+    raise CredentialUnavailableError(error_message) from ex
+azure.identity._exceptions.CredentialUnavailableError: ManagedIdentityCredential authentication unavailable, no response from the IMDS endpoint.
+2025-06-27 01:27:51,498 - azure.identity._internal.decorators - DEBUG - SharedTokenCacheCredential.get_token_info failed: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+Traceback (most recent call last):
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 23, in wrapper
+    token = fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 110, in get_token_info
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 156, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_credentials\shared_cache.py", line 186, in _get_token_base
+    account = self._get_account(self._username, self._tenant_id, is_cae=is_cae)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\mstan\OneDrive\Dokumenty\GitHub\2024-25d-fai2-adsai-group-nlp7\.venv\lib\site-packages\azure\identity\_internal\shared_token_cache.py", line 209, in _get_account
+    raise CredentialUnavailableError(message=NO_ACCOUNTS)
+azure.identity._exceptions.CredentialUnavailableError: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2025-06-27 01:27:51,501 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:27:53,527 - azure.identity._internal.decorators - DEBUG - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:27:53,527 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:27:53,527 - azure.identity._credentials.chained - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:27:53,527 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2d03e2ab-52e5-11f0-b7c1-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:53,832 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': '4031997b-df3f-4e57-8969-0b5d3ec54033'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: F81FBF308D9F47198F1EFC321B422C97 Ref B: AMS231020512021 Ref C: 2025-06-26T23:27:57Z'
+    'Date': 'Thu, 26 Jun 2025 23:27:57 GMT'
+2025-06-27 01:27:53,835 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/onlineEndpoints/emotion-endpoint-v2/deployments?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2f054f26-52e5-11f0-88ae-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:54,170 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2673'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-original-request-ids': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'c3aee91c-fd7e-4def-854e-a2315b831435'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: CF51D6DD168E4D359AE2DB48F8119354 Ref B: AMS231020512021 Ref C: 2025-06-26T23:27:57Z'
+    'Date': 'Thu, 26 Jun 2025 23:27:57 GMT'
+2025-06-27 01:27:54,185 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:27:56,099 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:27:56,100 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:27:56,100 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:27:56,102 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification-full/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '2f3a26a6-52e5-11f0-afdd-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:56,532 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '17'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '96d76228-5574-4beb-89d6-543ee0bb651e'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 49948B212D67454884953509998D4D4D Ref B: AMS231032609045 Ref C: 2025-06-26T23:28:00Z'
+    'Date': 'Thu, 26 Jun 2025 23:28:00 GMT'
+2025-06-27 01:27:56,533 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/models/Emotion-classification/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '30a119c1-52e5-11f0-ae97-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:56,710 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3927'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'ea168c5c-f178-4a9c-a028-24a423b3f78c'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 6809C88392C44782845485E26D4022A1 Ref B: AMS231032609045 Ref C: 2025-06-26T23:28:00Z'
+    'Date': 'Thu, 26 Jun 2025 23:28:00 GMT'
+2025-06-27 01:27:56,717 - azure.identity._credentials.azure_cli - DEBUG - Executing subprocess with the following arguments ['C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.CMD', 'account', 'get-access-token', '--output', 'json', '--resource', 'https://management.azure.com']
+2025-06-27 01:27:58,906 - azure.identity._internal.decorators - INFO - AzureCliCredential.get_token_info succeeded
+2025-06-27 01:27:58,906 - azure.identity._internal.decorators - DEBUG - [Authenticated account] Client ID: 04b07795-8ddb-461a-bbee-02f9e1bf7b46. Tenant ID: 0a33589b-0036-4fe8-a829-3ed0926af886. User Principal Name: 231648@buas.nl. Object ID (user): 1da7aac3-d86e-4699-ada1-b27111ba4073
+2025-06-27 01:27:58,906 - azure.identity._credentials.default - INFO - DefaultAzureCredential acquired a token from AzureCliCredential
+2025-06-27 01:27:58,910 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/NLP7-2025/environments/nlp7-inference-env/versions?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '30bc77e9-52e5-11f0-b3cc-7c214a408d59'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.16 (Windows-10-10.0.26100-SP0)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-06-27 01:27:59,295 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 404
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '824'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'a1d9e1ef-c383-4ea0-926b-4350ad30fd16'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: E8EC4ABECAC94721B854F921AD4358B0 Ref B: AMS231032609019 Ref C: 2025-06-26T23:28:03Z'
+    'Date': 'Thu, 26 Jun 2025 23:28:03 GMT'

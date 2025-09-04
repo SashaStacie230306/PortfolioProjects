@@ -1,0 +1,50 @@
+{
+  "title": "ESTA Visa Application Guide - USA",
+  "overview": "All travelers entering the USA must apply for an ESTA (Electronic System for Travel Authorization). It costs $21 (as of February 2024), payable by credit card or PayPal. Apply only through the official site https://esta.cbp.dhs.gov/. Submit at least 72 hours before travel.",
+  "requirements": [
+    "Valid passport/ Identity card minimum 6 months after return date)",
+    "Credit card or PayPal credentials",
+    "Emergency contact details",
+    "Employer contact information (if applicable)"
+  ],
+  "instructions": {
+    "step_1": "Visit https://esta.cbp.dhs.gov/ and select your preferred language.",
+    "step_2": "Click [CREATE NEW APPLICATION] or [CONTINUE EXISTING APPLICATION] if applicable.",
+    "step_3": "Select INDIVIDUAL APPLICATION.",
+    "step_4": "Read and accept the Security Notification and Waiver.",
+    "step_5": "Upload a clear image of your passport (especially the machine-readable zone).",
+    "step_6": "Review auto-filled details and manually correct as needed.",
+    "step_7": "You will receive a 4-digit code by e-mail, which you enter in the following window and confirm",
+    "step_8": "Provide information about any other nationalities and your email adress.",
+    "step_9": "Confirm passport info and enter the 4-digit email code.",
+    "step_10": "Add any alternative names, previous documents, and social media info (optional).",
+    "step_11": "Confirm GE/NEXUS/SENTRI membership (select [NO]).",
+    "step_12": "Enter parents' names.",
+    "step_13": "Add employer details (if any).",
+    "step_14": "Enter U.S. stay information (ship: M.V. Scenic Eclipse, 4000 Hollywood Blvd - Suite 625, Hollywood, FL, USA, Tel: +1 857-837-0373).",
+    "step_15": "Provide emergency contact details (name, email, phone).",
+    "step_16": "Provide accurate responses to all eligibility/security questions.",
+    "step_17": "Agree to waiver of rights and confirm details.",
+    "step_18": "Final check: confirm all application data before submitting.",
+    "step_19": "Enter your passport number, surname, birthdate, etc., to finalize.",
+    "step_20": "Confirm [DECLARATION OF PAYMENT], then pay via credit card or PayPal.",
+    "step_21": "After approval, return to the ESTA site, check your status and download the confirmation."
+  },
+  "additional_info": {
+    "security_notice": "Use of the DHS system may be monitored. You waive privacy expectations while using it.",
+    "waiver_notice": "ESTA approval does not guarantee entry. Entry is decided by U.S. Customs upon arrival.",
+    "payment_notice": "ESTA fee is non-refundable. Updates are free but re-applying requires full payment again.",
+    "refund_policy": "No refunds will be issued once payment is processed. By submitting, you accept the administrative fee."
+  },
+  "contact_note": "If you've visited Cuba with your current passport on or after Jan 12, 2021, contact +49 791 49 380 162 or clubreisen@marbet.com.",
+  "status_check_instructions": {
+    "site": "https://esta.cbp.dhs.gov/",
+    "actions": [
+      "Go to [CHECK ESTA STATUS].",
+      "Choose [CHECK INDIVIDUAL STATUS] or [CHECK GROUP STATUS].",
+      "Enter passport number, date of birth, and application/order number.",
+      "If lost, provide nationality, passport issue and expiry dates."
+    ]
+  },
+  "TIP": "Print and carry your approved ESTA with your passport in your hand luggage for check-in, boarding, and border checks. Valid for 2 years from approval."
+}

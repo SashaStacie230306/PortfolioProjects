@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "week-3"
+version = "0.1.0"
+description = ""
+authors = ["SashaStacie230306 <230306@buas.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+numpy = "^1.26.4"
+matplotlib = "^3.9.0"
+seaborn = "^0.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

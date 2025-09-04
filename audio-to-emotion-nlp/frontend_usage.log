@@ -1,0 +1,60 @@
+2025-06-04 12:41:02,659 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-04 12:41:03,242 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-04 12:41:03,288 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-04 12:41:51,708 - Audio file uploaded
+2025-06-11 22:23:53,251 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-11 22:23:53,803 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-11 22:23:53,877 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-11 22:23:54,879 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-11 22:34:04,545 - Text input submitted
+2025-06-11 22:36:23,898 - Text input submitted
+2025-06-11 22:37:56,582 - Audio file uploaded
+2025-06-19 00:20:01,804 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-19 00:20:02,340 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-19 00:20:02,373 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-19 00:20:03,248 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-19 01:26:26,233 - URL submitted: https://www.youtube.com/watch?v=Ic-wMMTCeEY
+2025-06-19 01:38:00,317 - Text input submitted
+2025-06-19 20:28:37,134 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-19 20:28:37,890 - HTTP Request: GET http://127.0.0.1:7861/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-19 20:28:37,927 - HTTP Request: HEAD http://127.0.0.1:7861/ "HTTP/1.1 200 OK"
+2025-06-19 20:28:38,712 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-19 20:29:30,730 - Text input submitted
+2025-06-20 01:05:28,569 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-20 01:05:29,388 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-20 01:05:29,480 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-20 01:05:30,205 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-20 07:17:13,259 - HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2025-06-20 07:17:13,774 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-20 07:17:14,500 - HTTP Request: GET http://127.0.0.1:7860/startup-events "HTTP/1.1 200 OK"
+2025-06-20 07:17:14,533 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-20 07:17:15,242 - HTTP Request: GET https://api.gradio.app/v2/tunnel-request "HTTP/1.1 200 OK"
+2025-06-20 07:17:15,349 - HTTP Request: GET https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_windows_amd64.exe "HTTP/1.1 200 OK"
+2025-06-20 07:23:37,282 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-20 07:23:37,815 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-20 07:23:37,851 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-20 07:23:38,694 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-20 07:24:02,882 - Text input submitted
+2025-06-20 18:10:42,353 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-20 18:10:42,863 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-20 18:10:42,924 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-20 18:10:44,805 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-20 18:11:07,498 - Text input submitted
+2025-06-20 18:11:10,957 - Text input submitted
+2025-06-20 18:11:23,057 - Text input submitted
+2025-06-20 18:11:37,379 - Text input submitted
+2025-06-20 18:13:11,831 - Audio file uploaded
+2025-06-20 18:18:28,796 - Audio file uploaded
+2025-06-20 18:33:51,991 - Audio file uploaded
+2025-06-20 18:39:51,877 - URL submitted: https://www.youtube.com/watch?v=x3aaIhfRUuY
+2025-06-20 18:55:11,324 - Text input submitted
+2025-06-20 18:55:57,873 - Text input submitted
+2025-06-20 21:06:27,137 - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-20 21:06:28,003 - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-06-20 21:06:28,040 - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-20 21:06:28,687 - HTTP Request: GET https://api.gradio.app/v3/tunnel-request "HTTP/1.1 200 OK"
+2025-06-20 21:10:57,331 - Text input submitted
+2025-06-20 21:11:36,010 - Text input submitted
+2025-06-20 21:21:01,578 - Text input submitted
+2025-06-20 21:22:02,396 - Text input submitted
+2025-06-20 21:28:46,184 - Audio file uploaded

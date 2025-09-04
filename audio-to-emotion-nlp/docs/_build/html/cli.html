@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLI Utilities (src/cli) &mdash; NLP Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+      <script src="_static/jquery.js"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration (src/config)" href="config.html" />
+    <link rel="prev" title="Backend API (src/app)" href="app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NLP Pipeline
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="app.html">Backend API (<cite>src/app</cite>)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CLI Utilities (<cite>src/cli</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration (<cite>src/config</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Module (<cite>src/data</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo Interface (<cite>src/demo</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment (<cite>src/deployment</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Model CLI Utilities (<cite>src/models</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transcription.html">Transcription (<cite>src/transcription</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities (<cite>src/utils</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing (<cite>tests/</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NLP Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CLI Utilities (<cite>src/cli</cite>)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cli.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cli-utilities-src-cli">
+<h1>CLI Utilities (<cite>src/cli</cite>)<a class="headerlink" href="#cli-utilities-src-cli" title="Permalink to this heading"></a></h1>
+<p>This module provides the main CLI interface for running the pipeline from the command line using <cite>argparse</cite> and <cite>typer</cite>.</p>
+<section id="typer-cli">
+<h2>Typer CLI<a class="headerlink" href="#typer-cli" title="Permalink to this heading"></a></h2>
+<p>Modern CLI tool using [Typer](<a class="reference external" href="https://typer.tiangolo.com/">https://typer.tiangolo.com/</a>):</p>
+<ul class="simple">
+<li><p><cite>–text</cite> for direct input</p></li>
+<li><p><cite>–file</cite> for batch processing</p></li>
+<li><p><cite>–lang</cite> for source language (e.g., “pl”)</p></li>
+</ul>
+</section>
+<section id="module-src.cli.main">
+<span id="classic-cli"></span><h2>Classic CLI<a class="headerlink" href="#module-src.cli.main" title="Permalink to this heading"></a></h2>
+<p>Emotion Classification CLI.</p>
+<p>This CLI allows users to classify emotions from text, audio, or video inputs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.audio">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">audio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#audio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.audio" title="Permalink to this definition"></a></dt>
+<dd><p>Classify emotion from an audio file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>Path</em>) – Path to the audio file (e.g., .mp3, .wav).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.save_mock_media_csv">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">save_mock_media_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#save_mock_media_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.save_mock_media_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Save a mock media prediction result to a CSV file.</p>
+<p>Used when in MOCK_MODE for audio or video processing.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.save_mock_text_csv">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">save_mock_text_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#save_mock_text_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.save_mock_text_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Save a mock emotion prediction result from text input to a CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Input text to mock-classify.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.text">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.ArgumentInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.text" title="Permalink to this definition"></a></dt>
+<dd><p>Classify emotion from a text input and save results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – The input sentence or paragraph to classify.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.url">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">media_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.url" title="Permalink to this definition"></a></dt>
+<dd><p>Classify emotion from a media URL (e.g., YouTube, MP3 link).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>media_url</strong> (<em>str</em>) – The media URL to process.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – Language of the media (default is ‘auto’).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.cli.main.video">
+<span class="sig-prename descclassname"><span class="pre">src.cli.main.</span></span><span class="sig-name descname"><span class="pre">video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/cli/main.html#video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.cli.main.video" title="Permalink to this definition"></a></dt>
+<dd><p>Classify emotion from a video file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>Path</em>) – Path to the video file (e.g., .mp4, .mov).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>A legacy CLI using <cite>argparse</cite>, intended for scripted usage.</p>
+</section>
+<section id="legacy-prototype">
+<h2>Legacy Prototype<a class="headerlink" href="#legacy-prototype" title="Permalink to this heading"></a></h2>
+<p>Deprecated version retained for comparison/testing only.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>src/
+└── cli/
+    ├── CLI_main.py
+    ├── CLI_main_typer.py
+    ├── main.py
+    └── Old_main.py
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="app.html" class="btn btn-neutral float-left" title="Backend API (src/app)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="config.html" class="btn btn-neutral float-right" title="Configuration (src/config)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Sasha Stacie, Monika Stangenberg, Deuza Borges Varela, Kamil Łęga, Celine Wu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

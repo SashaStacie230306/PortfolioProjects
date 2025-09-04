@@ -1,0 +1,15 @@
+# Airflow core and Azure provider support
+apache-airflow
+apache-airflow-providers-cncf-kubernetes
+apache-airflow-providers-microsoft-azure
+airflow-provider-azure-machinelearning
+
+# Azure ML SDK and dependencies
+azure-ai-ml
+azure-core
+azure-identity
+msal
+
+# Utility libraries
+pyyaml
+requests

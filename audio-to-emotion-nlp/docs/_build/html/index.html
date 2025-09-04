@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLP7 Emotion Classification Pipeline &mdash; NLP Pipeline 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+      <script src="_static/jquery.js"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+      <script src="_static/doctools.js"></script>
+      <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Backend API (src/app)" href="app.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            NLP Pipeline
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Backend API (<cite>src/app</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI Utilities (<cite>src/cli</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration (<cite>src/config</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Module (<cite>src/data</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo Interface (<cite>src/demo</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment (<cite>src/deployment</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Model CLI Utilities (<cite>src/models</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transcription.html">Transcription (<cite>src/transcription</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities (<cite>src/utils</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing (<cite>tests/</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">NLP Pipeline</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NLP7 Emotion Classification Pipeline</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nlp7-emotion-classification-pipeline">
+<h1>NLP7 Emotion Classification Pipeline<a class="headerlink" href="#nlp7-emotion-classification-pipeline" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>Welcome to the documentation for the NLP7 multimodal emotion classification system, developed as part of an applied research project. This pipeline is designed to identify emotional states from text, audio, and video inputs using transformer-based models.</p>
+<p>The system includes SenseAI, a front-end application that enables users to interact with the models in real time. It provides clear, accessible emotion predictions across different input types via an intuitive user interface built with Gradio.</p>
+</section>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>SenseAI interactive frontend app (Gradio)</p></li>
+<li><p>FastAPI-powered REST API for emotion inference</p></li>
+<li><p>CLI tools for model interaction, testing, and preprocessing</p></li>
+<li><p>Docker and Azure integration with AKS (Kubernetes)</p></li>
+<li><p>Speech-to-text transcription via AssemblyAI</p></li>
+<li><p>Cloud-first and local-first architecture</p></li>
+<li><p>Configurable with <cite>.env</cite> and <cite>environment.yaml</cite></p></li>
+<li><p>Modular architecture under <cite>src/</cite></p></li>
+<li><p>Pytest-driven test coverage</p></li>
+</ul>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Backend API (<cite>src/app</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI Utilities (<cite>src/cli</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration (<cite>src/config</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Module (<cite>src/data</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo Interface (<cite>src/demo</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment (<cite>src/deployment</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Model CLI Utilities (<cite>src/models</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transcription.html">Transcription (<cite>src/transcription</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utilities (<cite>src/utils</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing (<cite>tests/</cite>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emotion.html">emotion module</a></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="project-resources">
+<h2>Project Resources<a class="headerlink" href="#project-resources" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>GitHub</strong>: <a class="reference external" href="https://github.com/BredaUniversityADSAI/2024-25d-fai2-adsai-group-nlp7/">https://github.com/BredaUniversityADSAI/2024-25d-fai2-adsai-group-nlp7/</a></p></li>
+<li><p><strong>Environment setup</strong>: <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code></p></li>
+<li><p><strong>Deployment instructions</strong>: See <cite>deployment.rst</cite></p></li>
+<li><p><strong>Cloud strategy &amp; cost evaluation</strong>: <cite>project_plan/Cloud_Cost_Evaluation.docx</cite></p></li>
+</ul>
+</section>
+</section>
+<section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>To set up the NLP7 project locally:</p>
+<ol class="arabic">
+<li><p>Clone the repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/BredaUniversityADSAI/2024-25d-fai2-adsai-group-nlp7.git
+<span class="nb">cd</span><span class="w"> </span>nlp7
+</pre></div>
+</div>
+</li>
+<li><p>Create and activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yaml
+conda<span class="w"> </span>activate<span class="w"> </span>nlp-pipeline
+</pre></div>
+</div>
+</li>
+<li><p>Optional: Enable Sphinx mock mode for documentation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">SPHINX_MOCK_MODE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Set up <cite>.env</cite> for API keys and endpoints:
+- See <cite>.env</cite> template in the project root for variable references used across the pipeline and Azure integration.</p></li>
+</ol>
+</section>
+<section id="usage-overview">
+<h2>Usage Overview<a class="headerlink" href="#usage-overview" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>Launch FastAPI backend:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uvicorn<span class="w"> </span>src.app.API_main:app<span class="w"> </span>--reload
+</pre></div>
+</div>
+</li>
+<li><p>Run CLI inference:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>src/cli/main.py<span class="w"> </span>--text<span class="w"> </span><span class="s2">&quot;I feel great today!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Preprocess datasets:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>src/data/CLI_data_preprocessing.py
+</pre></div>
+</div>
+</li>
+<li><p>Transcribe an audio file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>src/transcription/CLI_transcribe.py<span class="w"> </span>--input<span class="w"> </span>path/to/audio.mp3
+</pre></div>
+</div>
+</li>
+<li><p>Launch the SenseAI demo UI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>src/demo/app_ui.py
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cloud-deployment-azure">
+<h1>Cloud Deployment (Azure)<a class="headerlink" href="#cloud-deployment-azure" title="Permalink to this heading"></a></h1>
+<p>Azure deployment scripts are located in <cite>src/deployment/</cite>:</p>
+<ul class="simple">
+<li><p><cite>deploy_kubernetes_endpoint.py</cite>: Create Azure endpoint (if not exists)</p></li>
+<li><p><cite>cloud_deploy.py</cite>: Deploy latest model version</p></li>
+<li><p><cite>score.py</cite>: Custom scoring script (used in deployment)</p></li>
+</ul>
+<p>Requirements:</p>
+<ul class="simple">
+<li><p>Azure credentials via CLI or managed identity</p></li>
+<li><p>Azure ML model and environment registered</p></li>
+<li><p>Kubernetes inference cluster provisioned</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this heading"></a></h1>
+<p>Tests are located under the <cite>tests/</cite> directory.</p>
+<p>To run tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="contributors">
+<h1>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>Sasha Stacie</p></li>
+<li><p>Monika Stangenberg</p></li>
+<li><p>Deuza Borges Varela</p></li>
+<li><p>Kamil Łęga</p></li>
+<li><p>Celine Wu</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="indices-and-tables">
+<h1>Indices and Tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="app.html" class="btn btn-neutral float-right" title="Backend API (src/app)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Sasha Stacie, Monika Stangenberg, Deuza Borges Varela, Kamil Łęga, Celine Wu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

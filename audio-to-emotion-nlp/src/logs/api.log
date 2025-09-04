@@ -1,0 +1,484 @@
+2025-06-25 17:13:46,544 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-25 17:13:46,544 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-25 17:13:50,177 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-25 17:13:50,183 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-25 17:13:50,184 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-25 17:13:54,714 - app.API_main - INFO - Root endpoint called
+2025-06-25 17:14:24,536 - app.API_main - DEBUG - /predict called with text: string
+2025-06-25 17:14:24,536 - app.API_main - DEBUG - Sending input text to azure_predict
+2025-06-25 17:14:34,050 - app.API_main - INFO - [DEBUG] Text received by API: 'string'
+2025-06-25 17:19:17,294 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-25 17:19:17,294 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-25 17:19:20,657 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-25 17:19:20,664 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-25 17:19:20,665 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-25 17:19:47,379 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-25 17:19:47,379 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-25 17:19:50,525 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-25 17:19:50,531 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-25 17:19:50,532 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-25 17:20:26,969 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-25 17:20:26,969 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-25 17:20:30,278 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-25 17:20:30,285 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-25 17:20:30,286 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-25 17:20:30,883 - app.API_main - INFO - Received /predict request with text: string
+2025-06-25 17:20:30,883 - app.API_main - INFO - Calling azure_predict for text classification
+2025-06-25 17:20:41,239 - app.API_main - INFO - [DEBUG] Text received by API: 'string'
+2025-06-25 17:21:23,545 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-25 17:21:23,545 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-25 17:21:26,369 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-25 17:21:26,375 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-25 17:21:26,376 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-25 17:21:41,960 - app.API_main - INFO - Received /predict request with text: string
+2025-06-25 17:21:41,961 - app.API_main - INFO - Calling azure_predict for text classification
+2025-06-25 17:21:52,476 - app.API_main - INFO - [DEBUG] Text received by API: 'string'
+2025-06-26 23:09:27,346 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:09:27,356 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:09:27,357 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:11:05,983 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:11:05,994 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:11:05,995 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:12:31,900 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:12:31,909 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:12:31,910 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:17:18,124 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:17:18,134 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:17:18,135 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:18:23,726 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:18:23,736 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:18:23,737 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:19:18,675 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:19:18,684 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:19:18,685 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:20:56,360 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:20:56,370 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:20:56,371 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:25:12,743 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:25:12,752 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:25:12,753 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:28:50,285 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:28:50,295 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:28:50,296 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:28:54,660 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,662 - app.API_main - INFO - Root endpoint called
+2025-06-26 23:28:54,664 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-06-26 23:28:54,667 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,668 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: nope.csv
+2025-06-26 23:28:54,668 - app.API_main - WARNING - Requested CSV file not found: nope.csv
+2025-06-26 23:28:54,669 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=nope.csv "HTTP/1.1 404 Not Found"
+2025-06-26 23:28:54,671 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,673 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: ../secret.csv
+2025-06-26 23:28:54,673 - app.API_main - WARNING - Invalid filename requested: ../secret.csv
+2025-06-26 23:28:54,674 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=..%2Fsecret.csv "HTTP/1.1 400 Bad Request"
+2025-06-26 23:28:54,674 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,676 - app.API_main - DEBUG - /download_csv_file endpoint called with filename:
+2025-06-26 23:28:54,676 - app.API_main - WARNING - Invalid filename requested:
+2025-06-26 23:28:54,677 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename= "HTTP/1.1 400 Bad Request"
+2025-06-26 23:28:54,678 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,679 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: folder\file.csv
+2025-06-26 23:28:54,679 - app.API_main - WARNING - Invalid filename requested: folder\file.csv
+2025-06-26 23:28:54,680 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=folder%5Cfile.csv "HTTP/1.1 400 Bad Request"
+2025-06-26 23:28:54,682 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,684 - app.API_main - INFO - Received /predict request with text: I am happy today!
+2025-06-26 23:28:54,685 - app.API_main - DEBUG - MOCK_MODE active - returning dummy prediction
+2025-06-26 23:28:54,688 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2025-06-26 23:28:54,691 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,694 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at least 1 characters', 'type': 'value_error.any_str.min_length', 'ctx': {'limit_value': 1}}]
+2025-06-26 23:28:54,695 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-26 23:28:54,695 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,696 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at most 512 characters', 'type': 'value_error.any_str.max_length', 'ctx': {'limit_value': 512}}]
+2025-06-26 23:28:54,697 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-26 23:28:54,697 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,698 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-26 23:28:54,699 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-26 23:28:54,701 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_value with data[116:126]
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-26 23:28:54,703 - multipart.multipart - DEBUG - Calling on_part_data with data[130:146]
+2025-06-26 23:28:54,704 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-26 23:28:54,704 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-26 23:28:54,704 - app.API_main - DEBUG - /predict_from_file: Received file 'test.mp3'
+2025-06-26 23:28:54,704 - app.API_main - DEBUG - MOCK_MODE active. Returning mock audio response.
+2025-06-26 23:28:54,705 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 200 OK"
+2025-06-26 23:28:54,707 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,708 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'file'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-26 23:28:54,709 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 422 Unprocessable Entity"
+2025-06-26 23:28:54,712 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_value with data[116:125]
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-26 23:28:54,713 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-26 23:28:54,714 - multipart.multipart - DEBUG - Calling on_part_data with data[129:145]
+2025-06-26 23:28:54,714 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-26 23:28:54,714 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-26 23:28:54,714 - app.API_main - DEBUG - /predict_from_video called with file: test.mp4
+2025-06-26 23:28:54,714 - app.API_main - DEBUG - MOCK_MODE active - returning dummy video prediction
+2025-06-26 23:28:54,715 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_video "HTTP/1.1 200 OK"
+2025-06-26 23:28:54,718 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,725 - app.API_main - DEBUG - /predict_from_url called with URL: https://youtube.com/watch?v=test, language: auto
+2025-06-26 23:28:54,725 - app.API_main - DEBUG - MOCK_MODE active - returning dummy URL prediction
+2025-06-26 23:28:54,726 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 200 OK"
+2025-06-26 23:28:54,729 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,730 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'url'), 'msg': 'invalid or missing URL scheme', 'type': 'value_error.url.scheme'}]
+2025-06-26 23:28:54,731 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 422 Unprocessable Entity"
+2025-06-26 23:28:54,733 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,734 - app.API_main - DEBUG - /download_text_csv endpoint called
+2025-06-26 23:28:54,734 - app.API_main - WARNING - MOCK_MODE active - no text CSV to download
+2025-06-26 23:28:54,735 - httpx - INFO - HTTP Request: GET http://testserver/download_text_csv "HTTP/1.1 404 Not Found"
+2025-06-26 23:28:54,737 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-26 23:28:54,738 - app.API_main - DEBUG - /download_csv endpoint called
+2025-06-26 23:28:54,738 - app.API_main - WARNING - MOCK_MODE active - no CSV to download
+2025-06-26 23:28:54,739 - httpx - INFO - HTTP Request: GET http://testserver/download_csv "HTTP/1.1 404 Not Found"
+2025-06-26 23:30:50,960 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:30:50,970 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:30:50,971 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:32:31,026 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:32:31,036 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:32:31,037 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:35:18,791 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:35:18,801 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:35:18,802 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:35:47,882 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:35:47,892 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:35:47,893 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:39:15,444 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:39:15,454 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:39:15,455 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-26 23:43:55,147 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-26 23:43:55,158 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-26 23:43:55,159 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:20:44,662 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:20:44,671 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:20:44,672 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:22:44,818 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:22:44,830 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:22:44,831 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:23:16,615 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:23:16,625 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:23:16,626 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:24:29,604 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:24:29,614 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:24:29,615 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:25:41,686 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:25:41,696 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:25:41,697 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:28:00,840 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:28:00,850 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:28:00,851 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:28:25,757 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:28:25,766 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:28:25,767 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:28:45,459 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:28:45,468 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:28:45,469 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:31:35,266 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:31:35,276 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:31:35,277 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:32:27,524 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:32:27,533 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:32:27,534 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:33:36,567 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:33:36,576 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:33:36,577 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:35:05,479 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:35:05,489 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:35:05,490 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:35:34,058 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:35:34,068 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:35:34,069 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:38:35,298 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:38:35,307 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:38:35,308 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:38:39,871 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:38:39,871 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:39:53,793 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:39:53,804 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:39:53,805 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:39:57,625 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:39:57,625 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:41:18,270 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:41:18,280 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:41:18,281 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:41:21,872 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:41:21,872 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:42:23,274 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:42:23,285 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:42:23,286 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:42:26,728 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:42:26,728 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:43:31,004 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:43:31,014 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:43:31,015 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:43:34,778 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:43:34,779 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:46:33,573 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:46:33,584 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:46:33,585 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:46:37,122 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:46:37,122 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:47:42,629 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:47:42,639 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:47:42,640 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:47:46,170 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:47:46,170 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:47:50,135 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,138 - app.API_main - INFO - Root endpoint called
+2025-06-27 00:47:50,141 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-06-27 00:47:50,144 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,146 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: nope.csv
+2025-06-27 00:47:50,146 - app.API_main - WARNING - Requested CSV file not found: nope.csv
+2025-06-27 00:47:50,147 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=nope.csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:47:50,149 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,151 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: ../secret.csv
+2025-06-27 00:47:50,151 - app.API_main - WARNING - Invalid filename requested: ../secret.csv
+2025-06-27 00:47:50,152 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=..%2Fsecret.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:47:50,153 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,154 - app.API_main - DEBUG - /download_csv_file endpoint called with filename:
+2025-06-27 00:47:50,154 - app.API_main - WARNING - Invalid filename requested:
+2025-06-27 00:47:50,156 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename= "HTTP/1.1 400 Bad Request"
+2025-06-27 00:47:50,156 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,158 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: folder\file.csv
+2025-06-27 00:47:50,158 - app.API_main - WARNING - Invalid filename requested: folder\file.csv
+2025-06-27 00:47:50,159 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=folder%5Cfile.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:47:50,162 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,164 - app.API_main - INFO - Received /predict request with text: I am happy today!
+2025-06-27 00:47:50,164 - app.API_main - DEBUG - MOCK_MODE active - returning dummy prediction
+2025-06-27 00:47:50,167 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2025-06-27 00:47:50,170 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,172 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at least 1 characters', 'type': 'value_error.any_str.min_length', 'ctx': {'limit_value': 1}}]
+2025-06-27 00:47:50,173 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:47:50,174 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,175 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at most 512 characters', 'type': 'value_error.any_str.max_length', 'ctx': {'limit_value': 512}}]
+2025-06-27 00:47:50,176 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:47:50,177 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,178 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:47:50,179 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:47:50,182 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_value with data[116:126]
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_part_data with data[130:146]
+2025-06-27 00:47:50,184 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:47:50,185 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:47:50,185 - app.API_main - DEBUG - /predict_from_file: Received file 'test.mp3'
+2025-06-27 00:47:50,185 - app.API_main - DEBUG - MOCK_MODE active. Returning mock audio response.
+2025-06-27 00:47:50,186 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 200 OK"
+2025-06-27 00:47:50,190 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,191 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'file'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:47:50,193 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:47:50,195 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,196 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:47:50,196 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_header_value with data[116:125]
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_part_data with data[129:145]
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:47:50,197 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:47:50,197 - app.API_main - DEBUG - /predict_from_video called with file: test.mp4
+2025-06-27 00:47:50,198 - app.API_main - DEBUG - MOCK_MODE active - returning dummy video prediction
+2025-06-27 00:47:50,199 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_video "HTTP/1.1 200 OK"
+2025-06-27 00:47:50,201 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,210 - app.API_main - DEBUG - /predict_from_url called with URL: https://youtube.com/watch?v=test, language: auto
+2025-06-27 00:47:50,210 - app.API_main - DEBUG - MOCK_MODE active - returning dummy URL prediction
+2025-06-27 00:47:50,212 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 200 OK"
+2025-06-27 00:47:50,215 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,216 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'url'), 'msg': 'invalid or missing URL scheme', 'type': 'value_error.url.scheme'}]
+2025-06-27 00:47:50,217 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:47:50,220 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,221 - app.API_main - DEBUG - /download_text_csv endpoint called
+2025-06-27 00:47:50,222 - app.API_main - WARNING - MOCK_MODE active - no text CSV to download
+2025-06-27 00:47:50,223 - httpx - INFO - HTTP Request: GET http://testserver/download_text_csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:47:50,225 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:47:50,227 - app.API_main - DEBUG - /download_csv endpoint called
+2025-06-27 00:47:50,227 - app.API_main - WARNING - MOCK_MODE active - no CSV to download
+2025-06-27 00:47:50,228 - httpx - INFO - HTTP Request: GET http://testserver/download_csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:49:01,615 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:49:01,626 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:49:01,627 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:49:05,044 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:49:05,044 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:49:09,254 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,258 - app.API_main - INFO - Root endpoint called
+2025-06-27 00:49:09,260 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-06-27 00:49:09,263 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,265 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: nope.csv
+2025-06-27 00:49:09,265 - app.API_main - WARNING - Requested CSV file not found: nope.csv
+2025-06-27 00:49:09,267 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=nope.csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:49:09,270 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,272 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: ../secret.csv
+2025-06-27 00:49:09,273 - app.API_main - WARNING - Invalid filename requested: ../secret.csv
+2025-06-27 00:49:09,274 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=..%2Fsecret.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:49:09,274 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,276 - app.API_main - DEBUG - /download_csv_file endpoint called with filename:
+2025-06-27 00:49:09,276 - app.API_main - WARNING - Invalid filename requested:
+2025-06-27 00:49:09,277 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename= "HTTP/1.1 400 Bad Request"
+2025-06-27 00:49:09,278 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,279 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: folder\file.csv
+2025-06-27 00:49:09,279 - app.API_main - WARNING - Invalid filename requested: folder\file.csv
+2025-06-27 00:49:09,280 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=folder%5Cfile.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:49:09,283 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,285 - app.API_main - INFO - Received /predict request with text: I am happy today!
+2025-06-27 00:49:09,285 - app.API_main - DEBUG - MOCK_MODE active - returning dummy prediction
+2025-06-27 00:49:09,289 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2025-06-27 00:49:09,292 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,293 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at least 1 characters', 'type': 'value_error.any_str.min_length', 'ctx': {'limit_value': 1}}]
+2025-06-27 00:49:09,295 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:49:09,295 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,296 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at most 512 characters', 'type': 'value_error.any_str.max_length', 'ctx': {'limit_value': 512}}]
+2025-06-27 00:49:09,297 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:49:09,298 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,299 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:49:09,300 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:49:09,303 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,305 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:49:09,305 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:49:09,305 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:49:09,305 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_header_value with data[116:126]
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_part_data with data[130:146]
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:49:09,306 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:49:09,306 - app.API_main - DEBUG - /predict_from_file: Received file 'test.mp3'
+2025-06-27 00:49:09,306 - app.API_main - DEBUG - MOCK_MODE active. Returning mock audio response.
+2025-06-27 00:49:09,308 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 200 OK"
+2025-06-27 00:49:09,310 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,311 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'file'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:49:09,312 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:49:09,315 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_value with data[116:125]
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:49:09,316 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:49:09,317 - multipart.multipart - DEBUG - Calling on_part_data with data[129:145]
+2025-06-27 00:49:09,317 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:49:09,317 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:49:09,317 - app.API_main - DEBUG - /predict_from_video called with file: test.mp4
+2025-06-27 00:49:09,317 - app.API_main - DEBUG - MOCK_MODE active - returning dummy video prediction
+2025-06-27 00:49:09,318 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_video "HTTP/1.1 200 OK"
+2025-06-27 00:49:09,322 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,329 - app.API_main - DEBUG - /predict_from_url called with URL: https://youtube.com/watch?v=test, language: auto
+2025-06-27 00:49:09,329 - app.API_main - DEBUG - MOCK_MODE active - returning dummy URL prediction
+2025-06-27 00:49:09,331 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 200 OK"
+2025-06-27 00:49:09,333 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,334 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'url'), 'msg': 'invalid or missing URL scheme', 'type': 'value_error.url.scheme'}]
+2025-06-27 00:49:09,335 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:49:09,339 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,340 - app.API_main - DEBUG - /download_text_csv endpoint called
+2025-06-27 00:49:09,340 - app.API_main - WARNING - MOCK_MODE active - no text CSV to download
+2025-06-27 00:49:09,341 - httpx - INFO - HTTP Request: GET http://testserver/download_text_csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:49:09,344 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:49:09,346 - app.API_main - DEBUG - /download_csv endpoint called
+2025-06-27 00:49:09,346 - app.API_main - WARNING - MOCK_MODE active - no CSV to download
+2025-06-27 00:49:09,347 - httpx - INFO - HTTP Request: GET http://testserver/download_csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:51:04,251 - app.API_main - DEBUG - FastAPI app initialized
+2025-06-27 00:51:04,260 - app.API_main - DEBUG - Mounting '/output' static file directory for CSV access
+2025-06-27 00:51:04,261 - app.API_main - INFO - API server initialized and ready to receive requests.
+2025-06-27 00:51:08,449 - app.model_loader - INFO - Loading model from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/checkpoint-3906
+2025-06-27 00:51:08,449 - app.model_loader - INFO - Loading label encoder from: /Users/deuzavarela/Documents/GitHub/2024-25d-fai2-adsai-group-nlp7/src/models/label_encoder.pkl
+2025-06-27 00:51:12,657 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,661 - app.API_main - INFO - Root endpoint called
+2025-06-27 00:51:12,663 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-06-27 00:51:12,667 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,668 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: nope.csv
+2025-06-27 00:51:12,668 - app.API_main - WARNING - Requested CSV file not found: nope.csv
+2025-06-27 00:51:12,669 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=nope.csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:51:12,672 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,674 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: ../secret.csv
+2025-06-27 00:51:12,674 - app.API_main - WARNING - Invalid filename requested: ../secret.csv
+2025-06-27 00:51:12,675 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=..%2Fsecret.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:51:12,676 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,677 - app.API_main - DEBUG - /download_csv_file endpoint called with filename:
+2025-06-27 00:51:12,677 - app.API_main - WARNING - Invalid filename requested:
+2025-06-27 00:51:12,678 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename= "HTTP/1.1 400 Bad Request"
+2025-06-27 00:51:12,679 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,680 - app.API_main - DEBUG - /download_csv_file endpoint called with filename: folder\file.csv
+2025-06-27 00:51:12,680 - app.API_main - WARNING - Invalid filename requested: folder\file.csv
+2025-06-27 00:51:12,682 - httpx - INFO - HTTP Request: GET http://testserver/download_csv_file?filename=folder%5Cfile.csv "HTTP/1.1 400 Bad Request"
+2025-06-27 00:51:12,684 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,686 - app.API_main - INFO - Received /predict request with text: I am happy today!
+2025-06-27 00:51:12,686 - app.API_main - DEBUG - MOCK_MODE active - returning dummy prediction
+2025-06-27 00:51:12,691 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2025-06-27 00:51:12,693 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,695 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at least 1 characters', 'type': 'value_error.any_str.min_length', 'ctx': {'limit_value': 1}}]
+2025-06-27 00:51:12,696 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:51:12,697 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,698 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'ensure this value has at most 512 characters', 'type': 'value_error.any_str.max_length', 'ctx': {'limit_value': 512}}]
+2025-06-27 00:51:12,698 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:51:12,699 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,700 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'text'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:51:12,702 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:51:12,706 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,707 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:51:12,707 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_header_value with data[116:126]
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_part_data with data[130:146]
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:51:12,708 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:51:12,709 - app.API_main - DEBUG - /predict_from_file: Received file 'test.mp3'
+2025-06-27 00:51:12,709 - app.API_main - DEBUG - MOCK_MODE active. Returning mock audio response.
+2025-06-27 00:51:12,710 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 200 OK"
+2025-06-27 00:51:12,712 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,713 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'file'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2025-06-27 00:51:12,714 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_file "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:51:12,717 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_field with data[36:55]
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_value with data[57:100]
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_field with data[102:114]
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_value with data[116:125]
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-06-27 00:51:12,718 - multipart.multipart - DEBUG - Calling on_part_data with data[129:145]
+2025-06-27 00:51:12,719 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-06-27 00:51:12,719 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-06-27 00:51:12,719 - app.API_main - DEBUG - /predict_from_video called with file: test.mp4
+2025-06-27 00:51:12,719 - app.API_main - DEBUG - MOCK_MODE active - returning dummy video prediction
+2025-06-27 00:51:12,720 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_video "HTTP/1.1 200 OK"
+2025-06-27 00:51:12,723 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,730 - app.API_main - DEBUG - /predict_from_url called with URL: https://youtube.com/watch?v=test, language: auto
+2025-06-27 00:51:12,730 - app.API_main - DEBUG - MOCK_MODE active - returning dummy URL prediction
+2025-06-27 00:51:12,732 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 200 OK"
+2025-06-27 00:51:12,734 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,735 - app.API_main - WARNING - Validation error: [{'loc': ('body', 'url'), 'msg': 'invalid or missing URL scheme', 'type': 'value_error.url.scheme'}]
+2025-06-27 00:51:12,736 - httpx - INFO - HTTP Request: POST http://testserver/predict_from_url "HTTP/1.1 422 Unprocessable Entity"
+2025-06-27 00:51:12,740 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,741 - app.API_main - DEBUG - /download_text_csv endpoint called
+2025-06-27 00:51:12,741 - app.API_main - WARNING - MOCK_MODE active - no text CSV to download
+2025-06-27 00:51:12,742 - httpx - INFO - HTTP Request: GET http://testserver/download_text_csv "HTTP/1.1 404 Not Found"
+2025-06-27 00:51:12,745 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-06-27 00:51:12,746 - app.API_main - DEBUG - /download_csv endpoint called
+2025-06-27 00:51:12,746 - app.API_main - WARNING - MOCK_MODE active - no CSV to download
+2025-06-27 00:51:12,747 - httpx - INFO - HTTP Request: GET http://testserver/download_csv "HTTP/1.1 404 Not Found"

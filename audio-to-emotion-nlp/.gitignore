@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+/pycache/*
+__pycache__/
+*.pyc
+*$py.class
+
+# Caches
+*.pot
+*.cache
+*.pyo
+
+# macOS metadata
+.DS_Store
+
+# Jupyter notebooks outputs
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment / virtualenv
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+*.env
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Custom output directories
+.output/
+output/
+temp_uploads/
+*.csv
+
+# OS installers or binary archives
+Miniconda3-latest-MacOSX-x86_64.sh
+
+# User files
+notes.ipynb
+Doker_notes.md

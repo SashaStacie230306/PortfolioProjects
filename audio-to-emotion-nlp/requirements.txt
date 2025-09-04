@@ -1,0 +1,6 @@
+fastapi
+gradi
+torch
+scikit-learn
+uvicorn
+pytest

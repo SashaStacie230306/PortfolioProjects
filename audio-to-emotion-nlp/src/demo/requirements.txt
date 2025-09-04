@@ -1,0 +1,4 @@
+gradio>=4.65.0
+gradio-client>=0.4.4
+
+requests

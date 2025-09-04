@@ -1,0 +1,45 @@
+# Use an official Python runtime as a parent image
+FROM python:3.10
+
+# Install
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV CACHE_BUSTER=20250612
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Add metadata to the image
+LABEL maintainer="231265@buas.nl"
+
+# Install Poetry
+RUN pip install --upgrade pip && \
+    pip install poetry
+
+# Copy only dependency files to use Docker cache efficiently
+COPY pyproject.toml poetry.lock* /app/
+
+# Disable Poetry virtual environments and install dependencies
+RUN poetry config virtualenvs.create false && \
+    poetry install --no-root
+
+# Manually install CPU-only version of torch (required for Transformer models)
+RUN pip install torch==2.7.0+cpu --index-url https://download.pytorch.org/whl/cpu
+
+# Copy model files explicitly before rest of the code to avoid .dockerignore issues
+COPY src/checkpoint-3906 /app/src/checkpoint-3906
+
+# Copy the rest of the project
+COPY . /app
+
+# Set PYTHONPATH so modules resolve correctly
+ENV PYTHONPATH="/app/src"
+
+
+# Expose FastAPI default port
+EXPOSE 8000
+
+# Run FastAPI app
+CMD ["uvicorn", "src.app.API_main:app", "--host", "0.0.0.0", "--port", "8000"]
